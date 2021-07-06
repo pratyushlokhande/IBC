@@ -18,6 +18,10 @@ tl.fromTo("#home-right", { opacity: 0 }, { opacity: 1, duration: 2 }, "-=2.5");
 // aos Initialisation
 AOS.init();
 
+// Rellax Initialisation
+var rellax = new Rellax(".rellax", {
+  breakpoints: [576, 768, 1201],
+});
 // Full Screen Nav
 
 $("#toggle").click(function () {

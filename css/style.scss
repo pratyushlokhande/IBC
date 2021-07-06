@@ -14,6 +14,7 @@ $heading: "Montserrat", sans-serif;
 $main-color: #0093e9;
 $secondary-color: #fff;
 $counter-color: #b31217;
+$placeholder-color: #80d0c7;
 
 // mixin
 
@@ -414,7 +415,7 @@ body {
           height: 70%;
           top: 50%;
           transform: translateY(-50%);
-          font-size: 50px;
+          font-size: 6vw;
           font-family: $heading;
           font-weight: 400;
           text-transform: uppercase;
@@ -476,34 +477,34 @@ body {
         }
       }
 
-      #btn-blog {
-        &.btn-grad {
-          background-image: linear-gradient(
-            to right,
-            #00d2ff 0%,
-            #3a7bd5 51%,
-            #00d2ff 100%
-          );
-        }
-        &.btn-grad {
-          // margin: 10px;
-          padding: 10px 30px;
-          text-align: center;
-          text-transform: uppercase;
-          transition: 0.5s;
-          background-size: 200% auto;
-          color: $secondary-color;
-          box-shadow: 0 0 20px $main-color;
-          border-radius: 10px;
-          display: block;
-        }
+      // #btn-blog {
+      //   &.btn-grad {
+      //     background-image: linear-gradient(
+      //       to right,
+      //       #00d2ff 0%,
+      //       #3a7bd5 51%,
+      //       #00d2ff 100%
+      //     );
+      //   }
+      //   &.btn-grad {
+      //     // margin: 10px;
+      //     padding: 10px 30px;
+      //     text-align: center;
+      //     text-transform: uppercase;
+      //     transition: 0.5s;
+      //     background-size: 200% auto;
+      //     color: $secondary-color;
+      //     box-shadow: 0 0 20px $main-color;
+      //     border-radius: 10px;
+      //     display: block;
+      //   }
 
-        &.btn-grad:hover {
-          background-position: right center; /* change the direction of the change here */
-          color: $secondary-color;
-          text-decoration: none;
-        }
-      }
+      //   &.btn-grad:hover {
+      //     background-position: right center; /* change the direction of the change here */
+      //     color: $secondary-color;
+      //     text-decoration: none;
+      //   }
+      // }
     }
   }
 
@@ -634,7 +635,7 @@ body {
 
   // #home-left,
   #home-right {
-    height: 65vh !important;
+    height: 50vh !important;
   }
 }
 
@@ -952,140 +953,143 @@ body {
 
 // Blog Section
 
-#new-blog {
-  min-height: 100vh;
-  background: $secondary-color;
-  width: 100%;
-  margin-bottom: 5em;
+// #new-blog {
+//   min-height: 100vh;
+//   background: $secondary-color;
+//   width: 100%;
+//   margin-bottom: 5em;
 
-  .header {
-    margin-top: 1vh;
-    width: 100%;
-    text-align: center;
-    font-family: $heading;
-    font-size: 20vw;
-    font-weight: bolder;
-    @include grad-text();
-  }
+//   .header {
+//     margin-top: 1vh;
+//     width: 100%;
+//     text-align: center;
+//     font-family: $heading;
+//     font-size: 20vw;
+//     font-weight: bolder;
+//     @include grad-text();
+//   }
 
-  #blog-container {
-    width: 100%;
-    padding: 0 5vw;
-    margin: 0;
+//   #blog-container {
+//     width: 100%;
+//     padding: 0 5vw;
+//     margin: 0;
 
-    .counter-card {
-      display: grid;
-      place-items: center;
-    }
+//     .counter-card {
+//       display: grid;
+//       place-items: center;
+//     }
 
-    .card {
-      width: 75%;
-      height: 50vh;
-      transition: all 250ms ease-in-out;
-      border: none;
-      border-radius: 5px;
-      @include shadow();
+//     .card {
+//       width: 75%;
+//       height: 50vh;
+//       transition: all 250ms ease-in-out;
+//       border: none;
+//       border-radius: 5px;
+//       @include shadow();
 
-      .img-cont {
-        width: 100%;
-        height: 40%;
-        overflow: hidden;
-        img {
-          width: 100%;
-          transition: transform 250ms ease-in-out;
-        }
-      }
-      .card-content {
-        width: 100%;
-        height: 60%;
-        padding: 1em;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        .heading {
-          font-family: $heading;
-          font-size: 2rem;
-          text-align: center;
-          @include grad-text();
-        }
-        .text-content {
-          font-size: 1.2rem;
-          text-align: center;
-        }
-        .card-btn {
-          display: flex;
-          justify-content: center;
-          padding: 0 1em;
+//       .img-cont {
+//         width: 100%;
+//         height: 40%;
+//         overflow: hidden;
+//         img {
+//           width: 100%;
+//           transition: transform 250ms ease-in-out;
+//         }
+//       }
+//       .card-content {
+//         width: 100%;
+//         height: 60%;
+//         padding: 1em;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-around;
+//         .heading {
+//           font-family: $heading;
+//           font-size: 2rem;
+//           text-align: center;
+//           @include grad-text();
+//         }
+//         .text-content {
+//           font-size: 1.2rem;
+//           text-align: center;
+//         }
+//         .card-btn {
+//           display: flex;
+//           justify-content: center;
+//           padding: 0 1em;
 
-          a {
-            width: 100%;
-            text-decoration: none;
-            padding: 1em;
-            text-align: center;
-            font-family: $heading;
-            color: $main-color;
-            background: #e6ecff;
-            transition: all 250ms ease-in-out;
+//           a {
+//             width: 100%;
+//             text-decoration: none;
+//             padding: 1em;
+//             text-align: center;
+//             font-family: $heading;
+//             color: $main-color;
+//             background: #e6ecff;
+//             transition: all 250ms ease-in-out;
 
-            span {
-              opacity: 0;
-              transition: opacity 250ms ease-in-out;
-            }
+//             span {
+//               opacity: 0;
+//               transition: opacity 250ms ease-in-out;
+//             }
 
-            &:hover {
-              @include bg;
-              color: $secondary-color;
-              span {
-                opacity: 1;
-              }
-            }
-          }
-        }
-      }
+//             &:hover {
+//               @include bg;
+//               color: $secondary-color;
+//               span {
+//                 opacity: 1;
+//               }
+//             }
+//           }
+//         }
+//       }
 
-      &:hover {
-        transform: translateY(-1%);
-        box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.8);
+//       &:hover {
+//         transform: translateY(-1%);
+//         box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.8);
 
-        img {
-          transform: translateY(-10%);
-        }
-      }
-    }
-  }
+//         img {
+//           transform: translateY(-10%);
+//         }
+//       }
+//     }
+//   }
 
-  #more-blog {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-    @include s-grad-button();
+//   #more-blog {
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 3rem;
+//     @include s-grad-button();
 
-    .btn-grad {
-      width: 100%;
-      margin-top: 3rem;
-      text-decoration: none;
-      width: 30%;
-      height: 4rem;
-      margin: 0 auto;
-      font-family: $heading;
-    }
-  }
-}
+//     .btn-grad {
+//       width: 100%;
+//       margin-top: 3rem;
+//       text-decoration: none;
+//       width: 30%;
+//       height: 4rem;
+//       margin: 0 auto;
+//       font-family: $heading;
+//     }
+//   }
+// }
 
-@media only screen and (max-width: 992px) {
-  .card {
-    width: 100% !important;
-  }
-}
+// @media only screen and (max-width: 992px) {
+//   .card {
+//     width: 100% !important;
+//   }
+// }
 
 #blog {
   width: 100%;
   min-height: 100vh;
   background: $secondary-color;
   margin-bottom: 5em;
+  position: relative;
+  // overflow: hidden;
 
   .header {
+    position: relative;
     margin-top: 1vh;
     width: 100%;
     text-align: center;
@@ -1600,7 +1604,7 @@ body {
       transition: box-shadow 250ms ease-in-out;
 
       &::placeholder {
-        color: $main-color;
+        color: $placeholder-color;
       }
 
       &:focus {
@@ -1661,6 +1665,7 @@ body {
 
 footer {
   @include bg();
+  padding-bottom: 5rem;
 
   #two,
   #three {
@@ -1704,11 +1709,15 @@ footer {
   i {
     font-size: 2rem;
     color: $secondary-color;
+    transition: color 250ms ease-in-out;
+    &:hover {
+      color: $main-color;
+    }
   }
 
   .form-control::placeholder {
     font-size: 0.95rem;
-    color: $secondary-color;
+    color: $placeholder-color;
     font-style: italic;
   }
 

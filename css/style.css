@@ -411,7 +411,7 @@ body::-webkit-scrollbar-thumb:hover {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  font-size: 50px;
+  font-size: 6vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -482,32 +482,6 @@ body::-webkit-scrollbar-thumb:hover {
     opacity: 1;
     left: 0;
   }
-}
-
-#home #small-nav .nav-toggle #btn-blog.btn-grad {
-  background-image: -webkit-gradient(linear, left top, right top, from(#00d2ff), color-stop(51%, #3a7bd5), to(#00d2ff));
-  background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
-}
-
-#home #small-nav .nav-toggle #btn-blog.btn-grad {
-  padding: 10px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: #fff;
-  -webkit-box-shadow: 0 0 20px #0093e9;
-          box-shadow: 0 0 20px #0093e9;
-  border-radius: 10px;
-  display: block;
-}
-
-#home #small-nav .nav-toggle #btn-blog.btn-grad:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
 }
 
 #home #home {
@@ -653,7 +627,7 @@ body::-webkit-scrollbar-thumb:hover {
     gap: 5vw !important;
   }
   #home-right {
-    height: 65vh !important;
+    height: 50vh !important;
   }
 }
 
@@ -1042,211 +1016,16 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Montserrat", sans-serif;
 }
 
-#new-blog {
-  min-height: 100vh;
-  background: #fff;
-  width: 100%;
-  margin-bottom: 5em;
-}
-
-#new-blog .header {
-  margin-top: 1vh;
-  width: 100%;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20vw;
-  font-weight: bolder;
-  background: #0093e9;
-  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#new-blog #blog-container {
-  width: 100%;
-  padding: 0 5vw;
-  margin: 0;
-}
-
-#new-blog #blog-container .counter-card {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
-#new-blog #blog-container .card {
-  width: 75%;
-  height: 50vh;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-  border: none;
-  border-radius: 5px;
-  -webkit-box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
-          box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
-}
-
-#new-blog #blog-container .card .img-cont {
-  width: 100%;
-  height: 40%;
-  overflow: hidden;
-}
-
-#new-blog #blog-container .card .img-cont img {
-  width: 100%;
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-}
-
-#new-blog #blog-container .card .card-content {
-  width: 100%;
-  height: 60%;
-  padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#new-blog #blog-container .card .card-content .heading {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  background: #0093e9;
-  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#new-blog #blog-container .card .card-content .text-content {
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-#new-blog #blog-container .card .card-content .card-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 1em;
-}
-
-#new-blog #blog-container .card .card-content .card-btn a {
-  width: 100%;
-  text-decoration: none;
-  padding: 1em;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  color: #0093e9;
-  background: #e6ecff;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-#new-blog #blog-container .card .card-content .card-btn a span {
-  opacity: 0;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
-}
-
-#new-blog #blog-container .card .card-content .card-btn a:hover {
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-  color: #fff;
-}
-
-#new-blog #blog-container .card .card-content .card-btn a:hover span {
-  opacity: 1;
-}
-
-#new-blog #blog-container .card:hover {
-  -webkit-transform: translateY(-1%);
-          transform: translateY(-1%);
-  -webkit-box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.8);
-          box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.8);
-}
-
-#new-blog #blog-container .card:hover img {
-  -webkit-transform: translateY(-10%);
-          transform: translateY(-10%);
-}
-
-#new-blog #more-blog {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 3rem;
-}
-
-#new-blog #more-blog .btn-grad {
-  background-image: -webkit-gradient(linear, left top, right top, from(#00d2ff), color-stop(51%, #3a7bd5), to(#00d2ff));
-  background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
-}
-
-#new-blog #more-blog .btn-grad {
-  padding: 10px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: #fff;
-  -webkit-box-shadow: 0 0 20px #80d0c7;
-          box-shadow: 0 0 20px #80d0c7;
-  border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#new-blog #more-blog .btn-grad:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-}
-
-#new-blog #more-blog .btn-grad {
-  width: 100%;
-  margin-top: 3rem;
-  text-decoration: none;
-  width: 30%;
-  height: 4rem;
-  margin: 0 auto;
-  font-family: "Montserrat", sans-serif;
-}
-
-@media only screen and (max-width: 992px) {
-  .card {
-    width: 100% !important;
-  }
-}
-
 #blog {
   width: 100%;
   min-height: 100vh;
   background: #fff;
   margin-bottom: 5em;
+  position: relative;
 }
 
 #blog .header {
+  position: relative;
   margin-top: 1vh;
   width: 100%;
   text-align: center;
@@ -1895,22 +1674,22 @@ body::-webkit-scrollbar-thumb:hover {
 
 #contact .contact-right input::-webkit-input-placeholder,
 #contact .contact-right textarea::-webkit-input-placeholder {
-  color: #0093e9;
+  color: #80d0c7;
 }
 
 #contact .contact-right input:-ms-input-placeholder,
 #contact .contact-right textarea:-ms-input-placeholder {
-  color: #0093e9;
+  color: #80d0c7;
 }
 
 #contact .contact-right input::-ms-input-placeholder,
 #contact .contact-right textarea::-ms-input-placeholder {
-  color: #0093e9;
+  color: #80d0c7;
 }
 
 #contact .contact-right input::placeholder,
 #contact .contact-right textarea::placeholder {
-  color: #0093e9;
+  color: #80d0c7;
 }
 
 #contact .contact-right input:focus,
@@ -1967,6 +1746,7 @@ body::-webkit-scrollbar-thumb:hover {
 footer {
   background-color: #0093e9;
   background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  padding-bottom: 5rem;
 }
 
 footer #two .text-muted,
@@ -2018,29 +1798,35 @@ footer #button-addon1 {
 footer i {
   font-size: 2rem;
   color: #fff;
+  -webkit-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+}
+
+footer i:hover {
+  color: #0093e9;
 }
 
 footer .form-control::-webkit-input-placeholder {
   font-size: 0.95rem;
-  color: #fff;
+  color: #80d0c7;
   font-style: italic;
 }
 
 footer .form-control:-ms-input-placeholder {
   font-size: 0.95rem;
-  color: #fff;
+  color: #80d0c7;
   font-style: italic;
 }
 
 footer .form-control::-ms-input-placeholder {
   font-size: 0.95rem;
-  color: #fff;
+  color: #80d0c7;
   font-style: italic;
 }
 
 footer .form-control::placeholder {
   font-size: 0.95rem;
-  color: #fff;
+  color: #80d0c7;
   font-style: italic;
 }
 
