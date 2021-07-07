@@ -37,12 +37,9 @@ body {
     font-family: $oregano;
     font-size: 10vw;
     font-weight: bolder;
-    background: #21d4fd;
-    background: -webkit-linear-gradient(to top right, #21d4fd 0%, #b721ff 100%);
-    background: -moz-linear-gradient(to top right, #21d4fd 0%, #b721ff 100%);
-    background: linear-gradient(to top right, #21d4fd 0%, #b721ff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    color: #fff;
   }
 
   .page-nav {
@@ -69,11 +66,11 @@ body {
         }
 
         &:hover {
-          background-color: #21d4fd;
+          background-color: #fff;
         }
 
         &.active {
-          background-color: #21d4fd;
+          background-color: #fff;
         }
       }
     }

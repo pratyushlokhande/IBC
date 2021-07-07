@@ -31,11 +31,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 10vw;
   font-weight: bolder;
-  background: #21d4fd;
-  background: -webkit-gradient(linear, left bottom, right top, from(#21d4fd), to(#b721ff));
-  background: linear-gradient(to top right, #21d4fd 0%, #b721ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff;
 }
 
 #header .page-nav {
@@ -74,11 +70,11 @@ body {
 }
 
 #header .page-nav .nav-list li:hover {
-  background-color: #21d4fd;
+  background-color: #fff;
 }
 
 #header .page-nav .nav-list li.active {
-  background-color: #21d4fd;
+  background-color: #fff;
 }
 
 #gallery {
