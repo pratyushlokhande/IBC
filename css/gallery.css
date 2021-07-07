@@ -63,7 +63,8 @@ body {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-size: 2.5vw;
-  color: #009dc4;
+  text-transform: uppercase;
+  color: #304fdb;
   font-weight: bolder;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
