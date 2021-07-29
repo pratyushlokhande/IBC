@@ -11,6 +11,22 @@ $delius: "Delius Swash Caps", cursive;
 $comfortaa: "Montserrat", sans-serif;
 // mixin
 
+@mixin bg {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+@mixin shadow {
+  box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
+}
+
+@mixin grad-text {
+  background: #0093e9;
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 // Initialisation
 *,
 *::before,
@@ -24,8 +40,260 @@ body {
   min-height: 100vh;
   width: 100%;
   font-family: $comfortaa;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  // background-color: #0093e9;
+  color: #fff;
+  // background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+#sidebar-nav {
+  // width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  .hamburger {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    display: flex;
+    height: 18px;
+    width: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    // z-index: 999;
+
+    &__icon {
+      display: inline-block;
+      height: 2px;
+      width: 24px;
+      background: #fff;
+      border-radius: 2px;
+    }
+  }
+
+  .sidebar {
+    height: 100vh;
+    width: 320px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    transform: translatex(-100%);
+    transition: transform 0.4s ease-in-out;
+
+    &__close {
+      position: absolute;
+      top: 50%;
+      right: -30px;
+      background: #fff;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.03);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translatex(-100%);
+      cursor: pointer;
+      transition: transform 0.4s ease-in-out 0.2s;
+
+      &::before,
+      &::after {
+        content: "";
+        height: 2px;
+        // background: #898989;
+        background: rgba(0, 147, 233, 0.8);
+        width: 24px;
+        display: block;
+        position: absolute;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+
+    &__menu {
+      //it's means sidebar__menu
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-around;
+      font-size: 36px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+      // color: #898989;
+
+      color: rgba(0, 147, 233, 0.8);
+
+      a {
+        // color: currentcolor;
+        @include grad-text;
+        text-decoration: none;
+        transform: translatex(-80%);
+        transition: transform 0.4s ease-in-out;
+
+        &::before {
+          content: "";
+          height: 2px;
+          // background: #898989;
+          background: rgba(0, 147, 233, 0.8);
+          width: 120px;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          transform: translatex(-50%);
+          opacity: 0;
+          transition: transform 0.4s ease-in-out, opacity 0.4s linear;
+        }
+
+        &:hover {
+          &::before {
+            transform: translatex(0);
+            opacity: 1;
+          }
+        }
+
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.05s;
+          }
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 4px;
+      }
+
+      a,
+      svg {
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+      }
+    }
+  }
+
+  .menu-control {
+    display: none;
+
+    &:checked {
+      & + .sidebar {
+        transform: translatex(0);
+      }
+
+      & + .sidebar .sidebar__close {
+        transform: translatex(0) rotate(45deg);
+      }
+
+      & + .sidebar .sidebar__menu a {
+        transform: translatex(0);
+      }
+    }
+  }
+}
+
+#home-page {
+  min-height: 100vh;
+  #img-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    #img-placer {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-basis: 25%;
+      flex-wrap: wrap;
+      .img-box {
+        position: relative;
+        width: calc(100% / 4);
+        height: calc(100% / 3);
+        background: url(//unsplash.it/1920);
+        background-position: center;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+
+        .carousel {
+          width: 100%;
+          height: 100%;
+          .carousel-inner {
+            height: 100%;
+          }
+
+          .carousel-item {
+            background-size: cover;
+            // background-position: 50% 50%;
+            width: 100%;
+            height: 100%;
+          }
+
+          .carousel-item img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .img-box:nth-child(2n) {
+        background: url(//unsplash.it/1280);
+        background-position: center;
+        background-size: cover;
+      }
+      .img-box:nth-child(3n) {
+        background: url(//unsplash.it/2050);
+        background-position: center;
+        background-size: cover;
+      }
+      @media only screen and (max-width: 647px) {
+        .img-box {
+          width: calc(100% / 3);
+          height: calc(100% / 4);
+        }
+      }
+    }
+
+    .img-overlay {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 100, 0.4);
+    }
+    .page-content {
+      position: absolute;
+      z-index: 20;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5vw;
+      font-weight: bolder;
+      // color: #fff;
+      @include grad-text;
+    }
+    @media only screen and (max-width: 768px) {
+      .page-content {
+        font-size: 5vh;
+      }
+    }
+  }
 }
 
 #header {
@@ -39,7 +307,8 @@ body {
     font-weight: bolder;
     // -webkit-background-clip: text;
     // -webkit-text-fill-color: transparent;
-    color: #fff;
+    // color: #fff;
+    @include grad-text;
   }
 
   .page-nav {
@@ -56,22 +325,28 @@ body {
       li {
         padding: 0.5rem 0.5rem;
         border-radius: 5px;
+        border: 5px solid rgba(0, 147, 233, 0.8);
         a {
           text-decoration: none;
           font-family: $comfortaa;
           font-size: 2.5vw;
           text-transform: uppercase;
-          color: #304fdb;
+          // color: #304fdb;
+          @include grad-text;
           font-weight: bolder;
           transition: all 200ms ease-in-out;
         }
 
         &:hover {
-          background-color: #fff;
+          // background-color: #fff;
+          box-shadow: rgba(0, 147, 233, 0.12) 0px 2px 4px 0px,
+            rgba(0, 147, 233, 0.32) 0px 2px 16px 0px;
         }
 
         &.active {
-          background-color: #fff;
+          // background-color: #fff;
+          // @include bg;
+          box-shadow: rgb(0, 147, 233) 0px 20px 30px -10px;
         }
       }
     }
@@ -79,7 +354,7 @@ body {
 }
 
 #gallery {
-  padding-top: 10vh;
+  margin: 10vh 0;
   width: 100%;
   min-height: 100vh;
 
@@ -333,5 +608,56 @@ body {
     .end-text {
       font-size: 3vw !important;
     }
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Special+Elite");
+
+#quote {
+  height: 50vh;
+  font-family: "Special Elite", cursive;
+  // background: #fffdf5;
+  // color: #3f3f5a;
+  color: rgba(0, 147, 233, 0.53);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  blockquote {
+    font-weight: 100;
+    font-size: 2rem;
+    max-width: 600px;
+    line-height: 1.4;
+    position: relative;
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+  blockquote:before,
+  blockquote:after {
+    position: absolute;
+    // color: #f1efe6;
+    color: rgba(0, 147, 233, 0.53);
+    font-size: 8rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  blockquote:before {
+    content: "“";
+    left: -5rem;
+    top: -2rem;
+  }
+
+  blockquote:after {
+    content: "”";
+    right: -5rem;
+    bottom: 1rem;
+  }
+
+  cite {
+    line-height: 3;
+    text-align: left;
   }
 }
