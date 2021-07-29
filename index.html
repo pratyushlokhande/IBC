@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,39 +14,25 @@
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Imports -->
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <!-- AOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.css" integrity="sha512-ksbpl5EUb4HLEKUNItsPMT/Ih6KcISE53GbYOu3xFUVYvTSSX5AJxTI2aigdQm9uNSkSsRMHsSGNKppkt691lw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- jQUERY -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-  </head>
-  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
 
     <!-- Intro Slider -->
     <div class="intro">
-      <div class="intro-text">
-        <h1 class="hide"><span class="text">Intellect</span></h1>
-        <h1 class="hide"><span class="text">Browsers'</span></h1>
-        <h1 class="hide"><span class="text">Consortium</span></h1>
-      </div>
+        <div class="intro-text">
+            <h1 class="hide"><span class="text">Intellect</span></h1>
+            <h1 class="hide"><span class="text">Browsers'</span></h1>
+            <h1 class="hide"><span class="text">Consortium</span></h1>
+        </div>
     </div>
     <div class="slider"></div>
     <!-- Intro Slider End -->
@@ -53,386 +40,330 @@
 
     <!-- Home Section -->
     <section id="home">
-      <!-- Nav-Bar -->
-      <!-- big-nav -->
-      <nav id="big-nav">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-3">
-              <div class="nav-img">
-                <img src="./assets/images/ibclogo.png" alt="" srcset="" />
-              </div>
+        <!-- Nav-Bar -->
+        <!-- big-nav -->
+        <nav id="big-nav">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="nav-img">
+                            <img src="./assets/images/ibclogo.png" alt="" srcset="" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="nav-list-container">
+                            <ul class="nav-list">
+                                <a href="./gallery.html" class="nav-item">
+                                    <li>Gallery</li>
+                                </a>
+                                <a href="./team.html" class="nav-item">
+                                    <li>Team</li>
+                                </a>
+                                <a href="./timeline.html" class="nav-item">
+                                    <li>Timeline</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="nav-btn">
+                            <div class="btn-grad">Our Blog</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-6">
-              <div class="nav-list-container">
-                <ul class="nav-list">
-                  <a href="./gallery.html" class="nav-item">
-                    <li>Gallery</li>
-                  </a>
-                  <a href="./team.html" class="nav-item">
-                    <li>Team</li>
-                  </a>
-                  <a href="./timeline.html" class="nav-item">
-                    <li>Timeline</li>
-                  </a>
-                </ul>
-              </div>
+        </nav>
+        <!-- small-nav -->
+        <nav id="small-nav">
+            <div class="container-fluid s-nav">
+                <div class="row">
+                    <div class="col-6 nav-img">
+                        <img src="./assets/images/ibclogo.png" alt="" srcset="" />
+                    </div>
+                    <div class="col-6 nav-toggle">
+                        <div class="button_container" id="toggle">
+                            <span class="top"></span>
+                            <span class="middle"></span>
+                            <span class="bottom"></span>
+                        </div>
+                        <div class="overlay" id="overlay">
+                            <nav class="overlay-menu">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div id="btn-blog" class="btn-grad">Our Blog</div>
+                                        </a>
+                                    </li>
+                                    <li><a href="./gallery.html">Gallery</a></li>
+                                    <li><a href="./team.html">Team</a></li>
+                                    <li><a href="./timeline.html">Timeline</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-3">
-              <div class="nav-btn"><div class="btn-grad">Our Blog</div></div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <!-- small-nav -->
-      <nav id="small-nav">
-        <div class="container-fluid s-nav">
-          <div class="row">
-            <div class="col-6 nav-img">
-              <img src="./assets/images/ibclogo.png" alt="" srcset="" />
-            </div>
-            <div class="col-6 nav-toggle">
-              <div class="button_container" id="toggle">
-                <span class="top"></span>
-                <span class="middle"></span>
-                <span class="bottom"></span>
-              </div>
-              <div class="overlay" id="overlay">
-                <nav class="overlay-menu">
-                  <ul>
-                    <li>
-                      <a href="#"
-                        ><div id="btn-blog" class="btn-grad">Our Blog</div></a
-                      >
-                    </li>
-                    <li><a href="./gallery.html">Gallery</a></li>
-                    <li><a href="./team.html">Team</a></li>
-                    <li><a href="./timeline.html">Timeline</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <!-- Vav-Bar-End -->
+        </nav>
+        <!-- Vav-Bar-End -->
 
-      <!-- home-page -->
-      <main id="home">
-        <div class="container-fluid">
-          <div class="row">
-            <div id="home-left" class="col-xl-6 col-md-12 gap-1">
-              <div id="left-content" class="row no-gutters">
-                <div class="title-text rellax" data-rellax-speed="5">
-                  Intellect<br />Browsers'<br />Consortium
-                </div>
-                <div class="home-btn rellax" data-rellax-speed="4">
-                  <a class="btn-grad" href="">Know More</a>
-                </div>
-                <div class="social-links">
-                  <ul class="links">
-                    <a href="https://www.facebook.com/ibcManit16" class="social-item rellax" data-rellax-speed="4">
-                      <li><i class="fab fa-facebook-square"></i></li>
-                    </a>
-                    <a href="https://www.instagram.com/ibc_manit/" class="social-item rellax" data-rellax-speed="3">
-                      <li><i class="fab fa-instagram-square"></i></li>
-                    </a>
-                    <a href="https://www.linkedin.com/in/intellect-browsers-consortium-manit-378b001a7/" class="social-item rellax" data-rellax-speed="2">
-                      <li><i class="fab fa-linkedin"></i></li>
-                    </a>
-                    <a href="#" class="social-item rellax" data-rellax-speed="1">
-                      <li><i class="fab fa-wordpress"></i></li>
-                    </a>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div id="home-right" class="col-xl-6 col-md-12">
-              <div class="container rellax" data-rellax-speed="3">
-                <div
-                  id="carouselExampleFade"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000">
-                      <a href="https://storyset.com/education">
-                        <img
-                          src="./assets/svg/Book lover-bro.svg"
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </a>
+        <!-- home-page -->
+        <main id="home">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="home-left" class="col-xl-6 col-md-12 gap-1">
+                        <div id="left-content" class="row no-gutters">
+                            <div class="title-text rellax" data-rellax-speed="5">
+                                Intellect<br />Browsers'<br />Consortium
+                            </div>
+                            <div class="home-btn rellax" data-rellax-speed="4">
+                                <a class="btn-grad" href="">Know More</a>
+                            </div>
+                            <div class="social-links">
+                                <ul class="links">
+                                    <a href="https://www.facebook.com/ibcManit16" class="social-item rellax" data-rellax-speed="4">
+                                        <li><i class="fab fa-facebook-square"></i></li>
+                                    </a>
+                                    <a href="https://www.instagram.com/ibc_manit/" class="social-item rellax" data-rellax-speed="3">
+                                        <li><i class="fab fa-instagram-square"></i></li>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/intellect-browsers-consortium-manit-378b001a7/" class="social-item rellax" data-rellax-speed="2">
+                                        <li><i class="fab fa-linkedin"></i></li>
+                                    </a>
+                                    <a href="#" class="social-item rellax" data-rellax-speed="1">
+                                        <li><i class="fab fa-wordpress"></i></li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                      <a href="https://storyset.com/web">
-                        <img
-                          src="./assets/svg/Bookmarks-bro.svg"
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                      <a href="https://storyset.com/business">
-                        <img
-                          src="./assets/svg/At work-bro.svg"
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                      <a href="https://storyset.com/business">
-                        <img
-                          src="./assets/svg/Business decisions-bro.svg"
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev"
-                  >
+                    <div id="home-right" class="col-xl-6 col-md-12">
+                        <div class="container rellax" data-rellax-speed="3">
+                            <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="5000">
+                                        <a href="https://storyset.com/education">
+                                            <img src="./assets/svg/Book lover-bro.svg" class="d-block w-100" alt="..." />
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="5000">
+                                        <a href="https://storyset.com/web">
+                                            <img src="./assets/svg/Bookmarks-bro.svg" class="d-block w-100" alt="..." />
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="5000">
+                                        <a href="https://storyset.com/business">
+                                            <img src="./assets/svg/At work-bro.svg" class="d-block w-100" alt="..." />
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="5000">
+                                        <a href="https://storyset.com/business">
+                                            <img src="./assets/svg/Business decisions-bro.svg" class="d-block w-100" alt="..." />
+                                        </a>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                     <span
                       class="carousel-control-prev-icon"
                       aria-hidden="true"
                     ></span>
                     <span class="visually-hidden">Previous</span>
                   </button>
-                  <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next"
-                  >
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
                     <span
                       class="carousel-control-next-icon"
                       aria-hidden="true"
                     ></span>
                     <span class="visually-hidden">Next</span>
                   </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </main>
+        </main>
     </section>
     <!-- home-page-ends -->
 
     <!-- About Page -->
     <section id="about">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <div id="about-heading" class="header rellax" data-rellax-speed="5" data-rellax-percentage="0.5">About</div>
-          <div id="about-content" class="row no-gutters">
-            <div id="about-left" class="col-xl-6 col-md-12 m-0 p-0">
-              <img src="./assets/svg/Bookmarks-bro.svg" alt="" srcset="" />
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div id="about-heading" class="header rellax" data-rellax-speed="5" data-rellax-percentage="0.5">About</div>
+                <div id="about-content" class="row no-gutters">
+                    <div id="about-left" class="col-xl-6 col-md-12 m-0 p-0">
+                        <img src="./assets/svg/Bookmarks-bro.svg" alt="" srcset="" />
+                    </div>
+                    <div id="about-right" class="col-xl-6 col-md-12 m-0 px-5">
+                        <p data-aos="fade-up" data-aos-duration="1500">
+                            IBC is the literary cum management society of NIT-Bhopal dedicated to broaden the literary knowledge base and enhance managerial skills of the students. IBC reinforces essential skills and fosters students to become adept and efficient by training them
+                            for real-life situations in numerous fields such as debating, writing, management, marketing and stock through exuberant competitions.
+                        </p>
+                        <p data-aos="fade-up" data-aos-duration="1500">
+                            IBC organizes various interactive events throughout the year which are an exemplar amalgamation of learning and fun. These events receive a great amount of active participation from students all over the country from various engineering, medical and business
+                            institutes.
+                        </p>
+                        <p data-aos="fade-up" data-aos-duration="1500">
+                            IBC's blog, <a href="http://ibcmanit.blogspot.com/">Cognizant Trances</a> offers an encouraging platform for young minds to explore the artist within them and articulate their work, to inspire others.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div id="about-right" class="col-xl-6 col-md-12 m-0 px-5">
-              <p data-aos="fade-up" data-aos-duration="1500">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Molestiae amet deserunt asperiores dicta assumenda odio nam quis
-                sed cupiditate fugit dolor vel necessitatibus natus fugiat
-                laborum, sint modi numquam enim.
-              </p>
-              <p data-aos="fade-up" data-aos-duration="1500">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
-                dicta rerum enim tempora molestiae nobis architecto esse error
-                placeat laborum eligendi consequatur qui, sequi est magnam? Ex
-                perspiciatis dolorum aperiam? 
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
     <!-- about section ends -->
 
     <!-- event section  -->
 
     <section id="event">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="header rellax" data-rellax-speed="5" data-rellax-percentage="0.5">Events</div>
-          <div class="row pb-5">
-            <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
-              <div class="flip-box">
-                <div
-                  class="front"
-                  style="background-image: url(//unsplash.it/900)"
-                >
-                  <div class="content text-center">
-                    Crescita<br />
-                  </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="header rellax" data-rellax-speed="5" data-rellax-percentage="0.5">Events</div>
+                <div class="row pb-5">
+                    <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="flip-box">
+                            <div class="front" style="background-image: url(//unsplash.it/900)">
+                                <div class="content text-wrap">
+                                    Crescita<br />
+                                </div>
+                            </div>
+                            <div class="back p-5 p-md-3 p-sm-2">
+                                <div class="content overflow-auto">
+                                    Crescita was the first online workshop conducted by IBC; aimed at bringing management and marketing to the forefront amongst the students, an event perfectly designed to educate the participants about stock market, business and marketing techniques. Crescita
+                                    was a means to help undergrad students to take their first steps in the world of management through interactive sessions with experts guiding them to prepare for top B-Schools in the world. The event was elaborately
+                                    divided into four phases wherein the first phase of Crescita was an interactive session with Mr. Saurabh Uboweja on the scope of MBA and its opportunities, with over 150+ aspiring students across the nation participating
+                                    actively. The second phase of the event was an interesting and knowledge based webinar conducted by Mr.Prateek Mandhana on “Basics of Stock Market and Investing”, that received multiple positive feedbacks from the attendees.
+                                    The next phase of the event was a creative ‘Case Study’ competition, where the crux of the event was to solve a case from the standpoint of a product manager given a marketing conundrum. The event concluded with a ‘Group
+                                    Discussion’, where the participants were divided into groups of 10 and asked to express their thoughts and opinions impromptu on the provided topic. The judgement was based on the participants interactive skills, knowledge
+                                    regarding the topic, flexibility, creativity, communication, leadership skills, personality and team work. Prizes and certificates were awarded accordingly.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="flip-box">
+                            <div class="front" style="background-image: url(//unsplash.it/1000)">
+                                <div class="content">MUN</div>
+                            </div>
+                            <div class="back p-5 p-md-3 p-sm-2">
+                                <div class="content overflow-auto">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, natus. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos quaerat quam, vel minus
+                                    consequuntur modi a! Asperiores earum rerum sunt alias.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="flip-box">
+                            <div class="front" style="background-image: url(//unsplash.it/1920)">
+                                <div class="content">Market Guru</div>
+                            </div>
+                            <div class="back p-5 p-md-3 p-sm-2">
+                                <div class="content overflow-auto">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, totam! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos quaerat quam, vel minus
+                                    consequuntur modi a! Asperiores earum rerum sunt alias.
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="flip-box">
+                            <div class="front" style="background-image: url(//unsplash.it/1500)">
+                                <div class="content text-center">
+                                    Azure<br />
+                                </div>
+                            </div>
+                            <div class="back p-5 p-md-3 p-sm-2">
+                                <div class="content overflow-auto">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit! Lorem ipsum dolor sit amet. Lorem ipsum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos quaerat
+                                    quam, vel minus consequuntur modi a! Asperiores earum rerum sunt alias.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="flip-box">
+                            <div class="front" style="background-image: url(//unsplash.it/950)">
+                                <div class="content">ttt</div>
+                            </div>
+                            <div class="back p-5 p-md-3 p-sm-2">
+                                <div class="content overflow-auto">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe incidunt nisi veniam sunt debitis ea. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos
+                                    quaerat quam, vel minus consequuntur modi a! Asperiores earum rerum sunt alias.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="flip-box">
+                            <div class="front" style="background-image: url(//unsplash.it/1920/1080)">
+                                <div class="content">Oblivion</div>
+                            </div>
+                            <div class="back p-5 p-md-3 p-sm-2">
+                                <div class="content overflow-auto">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, error! Lorem ipsum dolor sit amet. Lorem ipsum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos quaerat quam,
+                                    vel minus consequuntur modi a! Asperiores earum rerum sunt alias.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="back p-5 p-md-3 p-sm-2">
-                  <div class="content overflow-auto">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tenetur, odio! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi sequi et qui pariatur velit exercitationem quas reprehenderit mollitia, sapiente incidunt illum. Delectus repellendus sed accusamus magnam laborum cum distinctio.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos quaerat quam, vel minus consequuntur modi a! Asperiores earum rerum sunt alias.
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
-              <div
-                class="flip-box"
-              >
-                <div
-                  class="front"
-                  style="background-image: url(//unsplash.it/1000)"
-                >
-                  <div class="content">MUN</div>
-                </div>
-                <div class="back p-5 p-md-3 p-sm-2">
-                  <div class="content overflow-auto">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Corporis, natus. Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos quaerat quam, vel minus consequuntur modi a! Asperiores earum rerum sunt alias.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
-              <div
-                class="flip-box"
-              >
-                <div
-                  class="front"
-                  style="background-image: url(//unsplash.it/1920)"
-                >
-                  <div class="content">Market Guru</div>
-                </div>
-                <div class="back p-5 p-md-3 p-sm-2">
-                  <div class="content overflow-auto">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Dolorum, totam! Lorem ipsum dolor sit amet. 
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos quaerat quam, vel minus consequuntur modi a! Asperiores earum rerum sunt alias.
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
-              <div
-                class="flip-box"
-              >
-                <div
-                  class="front"
-                  style="background-image: url(//unsplash.it/1500)"
-                >
-                  <div class="content text-center">
-                    Azure<br />
-                  </div>
-                </div>
-                <div class="back p-5 p-md-3 p-sm-2">
-                  <div class="content overflow-auto">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vero, suscipit! Lorem ipsum dolor sit amet. Lorem ipsum 
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos quaerat quam, vel minus consequuntur modi a! Asperiores earum rerum sunt alias.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
-              <div
-                class="flip-box"
-              >
-                <div
-                  class="front"
-                  style="background-image: url(//unsplash.it/950)"
-                >
-                  <div class="content">ttt</div>
-                </div>
-                <div class="back p-5 p-md-3 p-sm-2">
-                  <div class="content overflow-auto">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Saepe incidunt nisi veniam sunt debitis ea. Lorem ipsum dolor sit amet. 
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos quaerat quam, vel minus consequuntur modi a! Asperiores earum rerum sunt alias.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12" data-aos="fade-up" data-aos-duration="1500">
-              <div class="flip-box">
-                <div
-                  class="front"
-                  style="background-image: url(//unsplash.it/1920/1080)"
-                >
-                  <div class="content">Oblivion</div>
-                </div>
-                <div class="back p-5 p-md-3 p-sm-2">
-                  <div class="content overflow-auto">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Rem, error! Lorem ipsum dolor sit amet. Lorem ipsum 
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ratione labore omnis molestiae suscipit quasi soluta sit dignissimos quaerat quam, vel minus consequuntur modi a! Asperiores earum rerum sunt alias.
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
         </div>
-      </div>
+        </div>
     </section>
     <!-- event section end -->
 
 
     <!-- gallery section -->
     <section id="gallery">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <div class="header rellax" data-rellax-speed="5" data-rellax-percentage="0.5">Gallery</div>
-          <div class="container px-5">
-            <div id="gallery-container" class="row no-gutters">
-              <div class="col-xl-6 p-xl-3 col-md-12 p-md-3" data-aos="fade-up" data-aos-duration="1500">
-                <img src="//unsplash.it/1080" alt="" srcset="">
-              </div>
-              <div class="col-xl-6 col-md-12 p-2">
-                <div class="row no-gutters">
-                  <div class="col-md-6 col-sm-12 p-2" data-aos="fade-up" data-aos-duration="1500">
-                    <img src="//unsplash.it/1920" alt="">
-                  </div>
-                  <div class="col-md-6 col-sm-12 p-2" data-aos="fade-up" data-aos-duration="1500">
-                    <img src="//unsplash.it/1921" alt="">
-                  </div>
-                  <div class="col-md-6 col-sm-12 p-2" data-aos="fade-up" data-aos-duration="1500">
-                    <img src="//unsplash.it/1922" alt="">
-                  </div>
-                  <div class="col-md-6 col-sm-12 p-2" data-aos="fade-up" data-aos-duration="1500">
-                    <img src="//unsplash.it/1923" alt="">
-                  </div>
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="header rellax" data-rellax-speed="5" data-rellax-percentage="0.5">Gallery</div>
+                <div class="container px-5">
+                    <div id="gallery-container" class="row no-gutters">
+                        <div class="col-xl-6 p-xl-3 col-md-12 p-md-3" data-aos="fade-up" data-aos-duration="1500">
+                            <img src="//unsplash.it/1080" alt="" srcset="">
+                        </div>
+                        <div class="col-xl-6 col-md-12 p-2">
+                            <div class="row no-gutters">
+                                <div class="col-md-6 col-sm-12 p-2" data-aos="fade-up" data-aos-duration="1500">
+                                    <img src="//unsplash.it/1920" alt="">
+                                </div>
+                                <div class="col-md-6 col-sm-12 p-2" data-aos="fade-up" data-aos-duration="1500">
+                                    <img src="//unsplash.it/1921" alt="">
+                                </div>
+                                <div class="col-md-6 col-sm-12 p-2" data-aos="fade-up" data-aos-duration="1500">
+                                    <img src="//unsplash.it/1922" alt="">
+                                </div>
+                                <div class="col-md-6 col-sm-12 p-2" data-aos="fade-up" data-aos-duration="1500">
+                                    <img src="//unsplash.it/1923" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-md-12 p-2">
+                            <div class="row no-gutters">
+                                <div class="col-sm-3 p-2" data-aos="fade-up" data-aos-duration="1500">
+                                    <img src="//unsplash.it/1001" alt="">
+                                </div>
+                                <div class="col-sm-3 p-2" data-aos="fade-up" data-aos-duration="1500">
+                                    <img src="//unsplash.it/1000" alt="">
+                                </div>
+                                <div class="col-sm-3 p-2" data-aos="fade-up" data-aos-duration="1500">
+                                    <img src="//unsplash.it/1002" alt="">
+                                </div>
+                                <div class="col-sm-3 p-2" data-aos="fade-up" data-aos-duration="1500">
+                                    <img src="//unsplash.it/1003" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-xl-12 col-md-12 p-2">
-                <div class="row no-gutters">
-                  <div class="col-sm-3 p-2" data-aos="fade-up" data-aos-duration="1500">
-                    <img src="//unsplash.it/1001" alt="">
-                  </div>
-                  <div class="col-sm-3 p-2" data-aos="fade-up" data-aos-duration="1500">
-                    <img src="//unsplash.it/1000" alt="">
-                  </div>
-                  <div class="col-sm-3 p-2" data-aos="fade-up" data-aos-duration="1500">
-                    <img src="//unsplash.it/1002" alt="">
-                  </div>
-                  <div class="col-sm-3 p-2" data-aos="fade-up" data-aos-duration="1500">
-                    <img src="//unsplash.it/1003" alt="">
-                  </div>
+                <div id="gallery-btn" class="col-auto p-2" data-aos="fade-up" data-aos-duration="1500">
+                    <a href="./gallery.html" class="btn-grad"><i class="fas fa-camera-retro"></i>Gallery</a>
                 </div>
-              </div>
             </div>
-          </div>
-          <div id="gallery-btn" class="col-auto p-2" data-aos="fade-up" data-aos-duration="1500">
-            <a href="./gallery.html" class="btn-grad"><i class="fas fa-camera-retro"></i>Gallery</a>
-          </div>
         </div>
-      </div>
     </section>
     <!-- gallery section end -->
 
@@ -539,175 +470,116 @@
     <!-- blog-section -->
 
     <section id="blog">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <div class="header rellax" data-rellax-speed="5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="2" data-rellax-desktop-speed="5" data-rellax-percentage="0.5">Blog</div>
-          <div class="blog-page">
-        
-        <div class="blog-content">
-          <div class="band">
-            <div
-              class="item-1" data-aos="fade-up" data-aos-duration="1500"
-            >
-              <a
-                href="#"
-                class="card"
-              >
-                <div
-                  class="thumb"
-                  style="
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="header rellax" data-rellax-speed="5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="2" data-rellax-desktop-speed="5" data-rellax-percentage="0.5">Blog</div>
+                <div class="blog-page">
+
+                    <div class="blog-content">
+                        <div class="band">
+                            <div class="item-1" data-aos="fade-up" data-aos-duration="1500">
+                                <a href="#" class="card">
+                                    <div class="thumb" style="
                     background-image: url(//unsplash.it/1080);
-                  "
-                ></div>
-                <article>
-                  <h1>Card Title</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, animi?</p>
-                  <span>Mary Winkler</span>
-                </article>
-              </a>
-            </div>
-            <div
-              class="item-2" data-aos="fade-up" data-aos-duration="1500"
-            >
-              <a
-                href="#"
-                class="card"
-              >
-                <div
-                  class="thumb"
-                  style="
+                  "></div>
+                                    <article>
+                                        <h1>Card Title</h1>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, animi?</p>
+                                        <span>Mary Winkler</span>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="item-2" data-aos="fade-up" data-aos-duration="1500">
+                                <a href="#" class="card">
+                                    <div class="thumb" style="
                     background-image: url(//unsplash.it/1081);
-                  "
-                ></div>
-                <article>
-                  <h1>Card Title Two</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum placeat laudantium molestiae fugit maiores alias nulla iusto nobis quisquam in</p>
-                  <span>Harry Brignull</span>
-                </article>
-              </a>
-            </div>
-            <div
-            class="item-3" data-aos="fade-up" data-aos-duration="1500"
-            >
-              <a
-              href="#"
-                class="card"
-              >
-              <div
-                  class="thumb"
-                  style="
+                  "></div>
+                                    <article>
+                                        <h1>Card Title Two</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum placeat laudantium molestiae fugit maiores alias nulla iusto nobis quisquam in</p>
+                                        <span>Harry Brignull</span>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="item-3" data-aos="fade-up" data-aos-duration="1500">
+                                <a href="#" class="card">
+                                    <div class="thumb" style="
                     background-image: url(//unsplash.it/1090);
-                    "
-                ></div>
-                <article>
-                  <h1>Card Title Three</h1>
-                  <p>
-                    Welcome to our monthly feature of fantastic tutorial results
-                    created by you, the Envato Tuts+ community!
-                  </p>
-                  <span>Melody Nieves</span>
-                </article>
-              </a>
-            </div>
-            <div
-              class="item-4" data-aos="fade-up" data-aos-duration="1500"
-            >
-              <a
-              href="#"
-              class="card"
-              >
-              <div
-              class="thumb"
-              style="
+                    "></div>
+                                    <article>
+                                        <h1>Card Title Three</h1>
+                                        <p>
+                                            Welcome to our monthly feature of fantastic tutorial results created by you, the Envato Tuts+ community!
+                                        </p>
+                                        <span>Melody Nieves</span>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="item-4" data-aos="fade-up" data-aos-duration="1500">
+                                <a href="#" class="card">
+                                    <div class="thumb" style="
                     background-image: url(//unsplash.it/900);
-                    "
-                ></div>
-                <article>
-                  <h1>Card Title Four</h1>
-                  <p>
-                    We’ll be putting things together so that as you scroll down
-                    from the top of the page you’ll see an “Alien Lander” making
-                    its way to touch down.
-                  </p>
-                  <span>Kezz Bracey</span>
-                </article>
-              </a>
-            </div>
-            <div
-            class="item-5" data-aos="fade-up" data-aos-duration="1500"
-            >
-              <a
-                href="#"
-                class="card"
-              >
-              <div
-              class="thumb"
-              style="
+                    "></div>
+                                    <article>
+                                        <h1>Card Title Four</h1>
+                                        <p>
+                                            We’ll be putting things together so that as you scroll down from the top of the page you’ll see an “Alien Lander” making its way to touch down.
+                                        </p>
+                                        <span>Kezz Bracey</span>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="item-5" data-aos="fade-up" data-aos-duration="1500">
+                                <a href="#" class="card">
+                                    <div class="thumb" style="
                     background-image: url(//unsplash.it/700);
-                    "
-                ></div>
-                <article>
-                  <h1>
-                    Card Title Five
-                  </h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum placeat laudantium molestiae fugit maiores alias nulla iusto nobis quisquam in, eum minus</p>
-                  <span>Rose</span>
-                </article>
-              </a>
-            </div>
-            <div
-            class="item-6" data-aos="fade-up" data-aos-duration="1500"
-            >
-              <a
-                href="#"
-                class="card"
-              >
-              <div
-                  class="thumb"
-                  style="
+                    "></div>
+                                    <article>
+                                        <h1>
+                                            Card Title Five
+                                        </h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum placeat laudantium molestiae fugit maiores alias nulla iusto nobis quisquam in, eum minus</p>
+                                        <span>Rose</span>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="item-6" data-aos="fade-up" data-aos-duration="1500">
+                                <a href="#" class="card">
+                                    <div class="thumb" style="
                     background-image: url(//unsplash.it/400);
-                  "
-                ></div>
-                <article>
-                  <h1>
-                    Card Title Six
-                  </h1>
-                  
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum placeat laudantium molestiae fugit maiores alias nulla iusto nobis quisquam in, eum minus</p>
-                  <span>Marie Gardiner</span>
-                </article>
-              </a>
-            </div>
-            <div
-              class="item-7" data-aos="fade-up" data-aos-duration="1500"
-            >
-              <a
-              href="#"
-                class="card"
-              >
-                <div
-                  class="thumb"
-                  style="
+                  "></div>
+                                    <article>
+                                        <h1>
+                                            Card Title Six
+                                        </h1>
+
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum placeat laudantium molestiae fugit maiores alias nulla iusto nobis quisquam in, eum minus</p>
+                                        <span>Marie Gardiner</span>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="item-7" data-aos="fade-up" data-aos-duration="1500">
+                                <a href="#" class="card">
+                                    <div class="thumb" style="
                     background-image: url(//unsplash.it/1500);
-                  "
-                ></div>
-                <article>
-                  <h1>
-                    Card Title Seven
-                  </h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum placeat laudantium molestiae fugit maiores alias nulla iusto nobis quisquam in</p>
-                  <span>Kendra Schaefer</span>
-                </article>
-              </a>
+                  "></div>
+                                    <article>
+                                        <h1>
+                                            Card Title Seven
+                                        </h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum placeat laudantium molestiae fugit maiores alias nulla iusto nobis quisquam in</p>
+                                        <span>Kendra Schaefer</span>
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="blog-btn" class="col-auto">
+                    <a href="#" class="btn-grad">Blog</a>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-          <div id="blog-btn" class="col-auto">
-            <a href="#" class="btn-grad">Blog</a>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- blog-section-end -->
@@ -715,166 +587,166 @@
     <!-- sponsor-section -->
 
     <section id="sponsor">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <div class="header rellax" data-rellax-speed="5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="2" data-rellax-desktop-speed="5" data-rellax-percentage="0.5">Sponsor</div>
-          <div id="sponsor-container" class="row no-gutters">
-            <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <i class="fab fa-apple"></i>
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="header rellax" data-rellax-speed="5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="2" data-rellax-desktop-speed="5" data-rellax-percentage="0.5">Sponsor</div>
+                <div id="sponsor-container" class="row no-gutters">
+                    <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="card">
+                            <div class="face face1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fab fa-apple"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face face2">
+                                <div class="content">
+                                    <h3>
+                                        <a href="#" target="_blank">Apple</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolor?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="card">
+                            <div class="face face1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fab fa-google"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face face2">
+                                <div class="content">
+                                    <h3>
+                                        <a href="#" target="_blank">Google</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugiat?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="card">
+                            <div class="face face1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fab fa-microsoft"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face face2">
+                                <div class="content">
+                                    <h3>
+                                        <a href="#" target="_blank">Microsoft</a>
+                                    </h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, earum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="card">
+                            <div class="face face1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fab fa-amazon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face face2">
+                                <div class="content">
+                                    <h3>
+                                        <a href="#" target="_blank">Amazon</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, molestiae.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="card">
+                            <div class="face face1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fab fa-spotify"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face face2">
+                                <div class="content">
+                                    <h3>
+                                        <a href="#" target="_blank">Spotify</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolor?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="card">
+                            <div class="face face1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fab fa-accusoft"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face face2">
+                                <div class="content">
+                                    <h3>
+                                        <a href="#" target="_blank">Accusoft</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugiat?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="card">
+                            <div class="face face1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face face2">
+                                <div class="content">
+                                    <h3>
+                                        <a href="#" target="_blank">Python</a>
+                                    </h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, earum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="card">
+                            <div class="face face1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fab fa-yahoo"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face face2">
+                                <div class="content">
+                                    <h3>
+                                        <a href="#" target="_blank">Yahoo</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, molestiae.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <a href="#" target="_blank">Apple</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolor?</p>
-                </div>
-            </div>
         </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <i class="fab fa-google"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <a href="#" target="_blank">Google</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugiat?</p>
-                </div>
-            </div>
-        </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <i class="fab fa-microsoft"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <a href="#" target="_blank">Microsoft</a>
-                    </h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, earum.</p>
-                </div>
-            </div>
-        </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <i class="fab fa-amazon"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <a href="#" target="_blank">Amazon</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, molestiae.</p>
-                </div>
-            </div>
-        </div>
-    
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <i class="fab fa-spotify"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <a href="#" target="_blank">Spotify</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolor?</p>
-                </div>
-            </div>
-        </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <i class="fab fa-accusoft"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <a href="#" target="_blank">Accusoft</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugiat?</p>
-                </div>
-            </div>
-        </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <a href="#" target="_blank">Python</a>
-                    </h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, earum.</p>
-                </div>
-            </div>
-        </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 sp-card py-2 px-5" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <i class="fab fa-yahoo"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <a href="#" target="_blank">Yahoo</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, molestiae.</p>
-                </div>
-            </div>
-        </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- sponsor section ends -->
@@ -882,114 +754,105 @@
     <!-- team section -->
 
     <section id="team">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <div class="header rellax" data-rellax-speed="5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="2" data-rellax-desktop-speed="5" data-rellax-percentage="0.5">Team</div>
-          <div id="team-container" class="row no-gutters">
-            <div class="col-lg-3 col-md-6 col-sm-12 p-5" data-aos="fade-up" data-aos-duration="1500">
-              <div
-                class="single-team text-center mt-30"
-                data-aos="fade-up"
-              >
-                <div class="team-image">
-                  <img src="//unsplash.it/720" alt="Team" />
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="header rellax" data-rellax-speed="5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="2" data-rellax-desktop-speed="5" data-rellax-percentage="0.5">Team</div>
+                <div id="team-container" class="row no-gutters">
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="single-team text-center mt-30" data-aos="fade-up">
+                            <div class="team-image">
+                                <img src="//unsplash.it/720" alt="Team" />
+                            </div>
+                            <div class="team-content">
+                                <h4 class="team-name"><a href="#">Modi Ji</a></h4>
+                                <span class="sub-title">Founder</span>
+                                <ul class="social mt-25">
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-instagram-square"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="single-team text-center mt-30" data-aos="fade-up">
+                            <div class="team-image">
+                                <img src="//unsplash.it/620" alt="Team" />
+                            </div>
+                            <div class="team-content">
+                                <h4 class="team-name"><a href="#">Trump</a></h4>
+                                <span class="sub-title">Co-Founder</span>
+                                <ul class="social mt-25">
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-instagram-square"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="single-team text-center mt-30" data-aos="fade-up">
+                            <div class="team-image">
+                                <img src="//unsplash.it/920" alt="Team" />
+                            </div>
+                            <div class="team-content">
+                                <h4 class="team-name"><a href="#">Hitler</a></h4>
+                                <span class="sub-title">Co-Founder</span>
+                                <ul class="social mt-25">
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-instagram-square"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-5" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="single-team text-center mt-30">
+                            <div class="team-image">
+                                <img src="//unsplash.it/700" alt="Team" />
+                            </div>
+                            <div class="team-content">
+                                <h4 class="team-name">
+                                    <a href="#">Obama</a>
+                                </h4>
+                                <span class="sub-title">Co-Founder</span>
+                                <ul class="social mt-25">
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href=<i class="fab fa-instagram-square"></i>
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-content">
-                  <h4 class="team-name"><a href="#">Modi Ji</a></h4>
-                  <span class="sub-title">Founder</span>
-                  <ul class="social mt-25">
-                    <li>
-                      <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-instagram-square"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 p-5" data-aos="fade-up" data-aos-duration="1500">
-              <div
-                class="single-team text-center mt-30"
-                data-aos="fade-up"
-              >
-                <div class="team-image">
-                  <img src="//unsplash.it/620" alt="Team" />
-                </div>
-                <div class="team-content">
-                  <h4 class="team-name"><a href="#">Trump</a></h4>
-                  <span class="sub-title">Co-Founder</span>
-                  <ul class="social mt-25">
-                    <li>
-                      <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-instagram-square"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 p-5" data-aos="fade-up" data-aos-duration="1500">
-              <div
-                class="single-team text-center mt-30"
-                data-aos="fade-up"
-              >
-                <div class="team-image">
-                  <img src="//unsplash.it/920" alt="Team" />
-                </div>
-                <div class="team-content">
-                  <h4 class="team-name"><a href="#">Hitler</a></h4>
-                  <span class="sub-title">Co-Founder</span>
-                  <ul class="social mt-25">
-                    <li>
-                      <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-instagram-square"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 p-5" data-aos="fade-up" data-aos-duration="1500">
-              <div
-                class="single-team text-center mt-30"
-              >
-                <div class="team-image">
-                  <img src="//unsplash.it/700" alt="Team" />
-                </div>
-                <div class="team-content">
-                  <h4 class="team-name">
-                    <a href="#">Obama</a>
-                  </h4>
-                  <span class="sub-title">Co-Founder</span>
-                  <ul class="social mt-25">
-                    <li>
-                      <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    </li>
-                    <li>
-                      <a href=<i class="fab fa-instagram-square"></i></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- team section end -->
@@ -997,42 +860,46 @@
     <!-- messages section -->
 
     <section id="message">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <div class="header rellax mb-5" data-rellax-speed="5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="2" data-rellax-desktop-speed="5" data-rellax-percentage="0.5">Message</div>
-          <div class="container px-5">
-            <div id="message-container" class="row no-gutters">
-              <div class="col-lg-4 p-lg-5 col-md-6 p-md-3 col-sm-12 p-sm-2 animate-box" data-aos="fade-up" data-aos-duration="1500">
-                <div class="box-testimony ">
-                        <blockquote>
-                          <span class="quote"><span><i class="fas fa-quote-left"></i></span></span>
-                          <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                        </blockquote>
-                        <p class="author">Doremon</p>
-                      </div>
-              </div>
-              <div class="col-lg-4 p-lg-5 col-md-6 p-md-3 col-sm-12 p-sm-2 animate-box" data-aos="fade-up" data-aos-duration="1500">
-                <div class="box-testimony ">
-                        <blockquote>
-                          <span class="quote"><span><i class="fas fa-quote-left"></i></span></span>
-                          <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&rdquo;</p>
-                        </blockquote>
-                        <p class="author">Shinchan</p>
-                      </div>
-              </div>
-              <div class="col-lg-4 p-lg-5 col-md-6 p-md-3 col-sm-12 p-sm-2 animate-box" data-aos="fade-up" data-aos-duration="1500">
-                <div class="box-testimony ">
-                        <blockquote>
-                          <span class="quote"><span><i class="fas fa-quote-left"></i></span></span>
-                          <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                        </blockquote>
-                        <p class="author">Oggy</p>
-                      </div>
-              </div>
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="header rellax mb-5" data-rellax-speed="5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="2" data-rellax-desktop-speed="5" data-rellax-percentage="0.5">Message</div>
+                <div class="container px-5">
+                    <div id="message-container" class="row no-gutters">
+                        <div class="col-lg-4 p-lg-5 col-md-6 p-md-3 col-sm-12 p-sm-2 animate-box" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="box-testimony ">
+                                <blockquote>
+                                    <span class="quote"><span><i class="fas fa-quote-left"></i></span></span>
+                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+                                        ocean.&rdquo;
+                                    </p>
+                                </blockquote>
+                                <p class="author">Doremon</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 p-lg-5 col-md-6 p-md-3 col-sm-12 p-sm-2 animate-box" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="box-testimony ">
+                                <blockquote>
+                                    <span class="quote"><span><i class="fas fa-quote-left"></i></span></span>
+                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&rdquo;</p>
+                                </blockquote>
+                                <p class="author">Shinchan</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 p-lg-5 col-md-6 p-md-3 col-sm-12 p-sm-2 animate-box" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="box-testimony ">
+                                <blockquote>
+                                    <span class="quote"><span><i class="fas fa-quote-left"></i></span></span>
+                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+                                        ocean.&rdquo;
+                                    </p>
+                                </blockquote>
+                                <p class="author">Oggy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- message section end -->
@@ -1040,100 +907,91 @@
     <!-- contact us -->
 
     <section id="contact">
-      <div class="container-fluid">
-        <div class="header rellax" data-rellax-speed="5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="2" data-rellax-desktop-speed="5" data-rellax-percentage="0.5">Contact</div>
-        <div id="contact-container" class="row no-gutters">
-          <div class="col-xl-6 col-md-12 p-5 c-card" data-aos="fade-up" data-aos-duration="400">
-            <img src="./assets/svg/Contact us-bro.svg" alt="">
-          </div>
-          <div class="col-xl-6 col-md-12 p-5 c-card">
-            <div class="contact-right" data-aos="fade-up" data-aos-duration="1500">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <textarea name="#" id="#" cols="10" rows="5" placeholder="Message"></textarea>
-            <button class="btn-grad" data-aos="fade-up" data-aos-duration="1500"><span><i class="fas fa-paper-plane"></i></span> Message </button>
-          </div>
-          </div>
+        <div class="container-fluid">
+            <div class="header rellax" data-rellax-speed="5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="2" data-rellax-desktop-speed="5" data-rellax-percentage="0.5">Contact</div>
+            <div id="contact-container" class="row no-gutters">
+                <div class="col-xl-6 col-md-12 p-5 c-card" data-aos="fade-up" data-aos-duration="400">
+                    <img src="./assets/svg/Contact us-bro.svg" alt="">
+                </div>
+                <div class="col-xl-6 col-md-12 p-5 c-card">
+                    <div class="contact-right" data-aos="fade-up" data-aos-duration="1500">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <textarea name="#" id="#" cols="10" rows="5" placeholder="Message"></textarea>
+                        <button class="btn-grad" data-aos="fade-up" data-aos-duration="1500"><span><i class="fas fa-paper-plane"></i></span> Message </button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- contact section end -->
 
     <!-- footer -->
 
-     <footer>
-    <div class="container py-5">
-      <div class="row py-4">
-        <div id="one" class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center-md">
-          <img src="./assets/images/ibclogo.png" alt="" class="mb-3" data-aos="fade-up" data-aos-duration="1500">
-          <h3 data-aos="fade-up" data-aos-duration="1500">Intellect Browsers'<br>Consortium</h3>
-          <!-- <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p> -->
-          <ul class="list-inline mt-4">
-            <li class="list-inline-item" data-aos="fade-up" data-aos-duration="1500" ><a href="#" target="_blank" title="facebook"><i class="fab fa-facebook-square"></i></a></li>
-            <li class="list-inline-item" data-aos="fade-up" data-aos-duration="1500" ><a href="#" target="_blank" title="instagram"><i class="fab fa-instagram-square"></i></a></li>
-            <li class="list-inline-item" data-aos="fade-up" data-aos-duration="1500" ><a href="#" target="_blank" title="linkedin"><i class="fab fa-linkedin"></i></a></li>
-            <li class="list-inline-item" data-aos="fade-up" data-aos-duration="1500" ><a href="#" target="_blank" title="wordpress"><i class="fab fa-wordpress"></i></a></li>
-          </ul>
-        </div>
-        <div id="two" class="col-lg-2 col-md-6 mb-4 mb-lg-0 text-center-md">
-          <h6 class="text-uppercase font-weight-bold mb-4" data-aos="fade-up" data-aos-duration="1500">Quick Links</h6>
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2" data-aos="fade-up" data-aos-duration="1500" ><a href="#" class="text-muted">Blog</a></li>
-            <li class="mb-2" data-aos="fade-up" data-aos-duration="1500" ><a href="./timeline.html" class="text-muted">Timeline</a></li>
-            <li class="mb-2" data-aos="fade-up" data-aos-duration="1500" ><a href="./index.html" class="text-muted">Gallery</a></li>
-            <li class="mb-2" data-aos="fade-up" data-aos-duration="1500" ><a href="./team.html" class="text-muted">Team</a></li>
-          </ul>
-        </div>
-        <div id="three" class="col-lg-2 col-md-6 mb-4 mb-lg-0 text-center-md">
-          <h6 class="text-uppercase font-weight-bold mb-4" data-aos="fade-up" data-aos-duration="1500">Events</h6>
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2" data-aos="fade-up" data-aos-duration="1500" ><a href="#" class="text-muted">MUN</a></li>
-            <li class="mb-2" data-aos="fade-up" data-aos-duration="1500" ><a href="#" class="text-muted">Crescita</a></li>
-            <li class="mb-2" data-aos="fade-up" data-aos-duration="1500" ><a href="#" class="text-muted">Azure</a></li>
-            <li class="mb-2" data-aos="fade-up" data-aos-duration="1500" ><a href="#" class="text-muted">ttt</a></li>
-          </ul>
-        </div>
-        <div id="four" class="col-lg-4 col-md-6 mb-lg-0 text-center-md">
-          <h6 class="text-uppercase font-weight-bold mb-4" data-aos="fade-up" >Newsletter</h6>
-          <p class="text-muted mb-4 px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
-          <div id="sub-input" class="p-1 rounded border" data-aos="fade-up" data-aos-duration="1500">
-            <div class="input-group">
-              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0" data-aos="fade-up" data-aos-duration="1500">
-              <div class="input-group-append">
-                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
-              </div>
+    <footer>
+        <div class="container py-5">
+            <div class="row py-4">
+                <div id="one" class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center-md">
+                    <img src="./assets/images/ibclogo.png" alt="" class="mb-3" data-aos="fade-up" data-aos-duration="1500">
+                    <h3 data-aos="fade-up" data-aos-duration="1500">Intellect Browsers'<br>Consortium</h3>
+                    <!-- <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p> -->
+                    <ul class="list-inline mt-4">
+                        <li class="list-inline-item" data-aos="fade-up" data-aos-duration="1500"><a href="#" target="_blank" title="facebook"><i class="fab fa-facebook-square"></i></a></li>
+                        <li class="list-inline-item" data-aos="fade-up" data-aos-duration="1500"><a href="#" target="_blank" title="instagram"><i class="fab fa-instagram-square"></i></a></li>
+                        <li class="list-inline-item" data-aos="fade-up" data-aos-duration="1500"><a href="#" target="_blank" title="linkedin"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="list-inline-item" data-aos="fade-up" data-aos-duration="1500"><a href="#" target="_blank" title="wordpress"><i class="fab fa-wordpress"></i></a></li>
+                    </ul>
+                </div>
+                <div id="two" class="col-lg-2 col-md-6 mb-4 mb-lg-0 text-center-md">
+                    <h6 class="text-uppercase font-weight-bold mb-4" data-aos="fade-up" data-aos-duration="1500">Quick Links</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2" data-aos="fade-up" data-aos-duration="1500"><a href="#" class="text-muted">Blog</a></li>
+                        <li class="mb-2" data-aos="fade-up" data-aos-duration="1500"><a href="./timeline.html" class="text-muted">Timeline</a></li>
+                        <li class="mb-2" data-aos="fade-up" data-aos-duration="1500"><a href="./index.html" class="text-muted">Gallery</a></li>
+                        <li class="mb-2" data-aos="fade-up" data-aos-duration="1500"><a href="./team.html" class="text-muted">Team</a></li>
+                    </ul>
+                </div>
+                <div id="three" class="col-lg-2 col-md-6 mb-4 mb-lg-0 text-center-md">
+                    <h6 class="text-uppercase font-weight-bold mb-4" data-aos="fade-up" data-aos-duration="1500">Events</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2" data-aos="fade-up" data-aos-duration="1500"><a href="#" class="text-muted">MUN</a></li>
+                        <li class="mb-2" data-aos="fade-up" data-aos-duration="1500"><a href="#" class="text-muted">Crescita</a></li>
+                        <li class="mb-2" data-aos="fade-up" data-aos-duration="1500"><a href="#" class="text-muted">Azure</a></li>
+                        <li class="mb-2" data-aos="fade-up" data-aos-duration="1500"><a href="#" class="text-muted">ttt</a></li>
+                    </ul>
+                </div>
+                <div id="four" class="col-lg-4 col-md-6 mb-lg-0 text-center-md">
+                    <h6 class="text-uppercase font-weight-bold mb-4" data-aos="fade-up">Newsletter</h6>
+                    <p class="text-muted mb-4 px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
+                    <div id="sub-input" class="p-1 rounded border" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="input-group-append">
+                                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <hr>
-    <!-- Copyrights -->
-    <div class="py-4">
-      <div class="container text-center">
-        <p class="text-muted mb-0 py-2">Made by <a href="#">Team IBC</a> with ❤</p>
-      </div>
-    </div>
-  </footer>
+        <hr>
+        <!-- Copyrights -->
+        <div class="py-4">
+            <div class="container text-center">
+                <p class="text-muted mb-0 py-2">Made by <a href="#">Team IBC</a> with ❤</p>
+            </div>
+        </div>
+    </footer>
 
 
 
     <!-- Includes -->
     <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- GSAP -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"
-      integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Rellax JS -->
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
@@ -1143,5 +1001,6 @@
 
     <!-- include js file -->
     <script type="text/javascript" src="./js/script.js"></script>
-  </body>
+</body>
+
 </html>
