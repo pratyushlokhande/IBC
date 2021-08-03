@@ -75,6 +75,13 @@ body {
     // @include grad-text;
   }
 
+  @media only screen and (max-width: 576px) {
+    #page-title {
+      // top: 65%;
+      font-size: 5vh;
+    }
+  }
+
   #team-image {
     display: none !important;
     position: relative;
