@@ -56,12 +56,6 @@ body {
   color: #fff;
 }
 
-@media only screen and (max-width: 576px) {
-  #header #page-title {
-    font-size: 5vh;
-  }
-}
-
 #header #team-image {
   display: none !important;
   position: relative;
