@@ -16,7 +16,12 @@ tl.fromTo(
 tl.fromTo("#home-right", { opacity: 0 }, { opacity: 1, duration: 2 }, "-=2.5");
 
 // aos Initialisation
-AOS.init();
+AOS.init({
+  disable: function () {
+    var maxWidth = 800;
+    return window.innerWidth < maxWidth;
+  },
+});
 
 // Rellax Initialisation
 var rellax = new Rellax(".rellax", {
@@ -67,13 +72,16 @@ window.addEventListener("resize", function () {
 
 // Intersection Observer
 const bigNav = document.querySelector("#big-nav");
+const smallNav = document.querySelector("#small-nav");
 
 window.addEventListener("scroll", () => {
   const scrolled = window.scrollY;
 
   if (scrolled > 1) {
     bigNav.classList.add("nav-active");
+    smallNav.classList.add("small-nav-active");
   } else {
     bigNav.classList.remove("nav-active");
+    smallNav.classList.remove("small-nav-active");
   }
 });

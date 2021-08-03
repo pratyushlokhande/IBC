@@ -50,6 +50,7 @@
   </head>
   <body>
     <section id="header">
+      <div class="wrapper"></div>
       <div id="page-title" class="container">OUR TEAM</div>
       <div id="team-image" class="container">
         <img src="./assets/svg/Company-pana.svg" alt="" />
@@ -726,7 +727,12 @@
 
           <!-- head designer -->
 
-          <div id="head-designer" class="col-xl-6 col-md-12" data-aos="fade-up" data-aos-duration="1500">
+          <div
+            id="head-designer"
+            class="col-xl-6 col-md-12"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             <h3>HEAD DESIGNER</h3>
             <div class="container">
               <div class="single-team text-center mt-30">
@@ -756,7 +762,12 @@
 
           <!-- creative head -->
 
-          <div id="creative-head" class="col-xl-6 col-md-12" data-aos="fade-up" data-aos-duration="1500">
+          <div
+            id="creative-head"
+            class="col-xl-6 col-md-12"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             <h3>CREATIVE HEAD</h3>
             <div class="container">
               <div class="single-team text-center mt-30">
@@ -974,7 +985,12 @@
     ></script>
 
     <script>
-      AOS.init();
+      AOS.init({
+        disable: function () {
+          var maxWidth = 800;
+          return window.innerWidth < maxWidth;
+        },
+      });
 
       const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 

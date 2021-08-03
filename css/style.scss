@@ -127,6 +127,7 @@ body {
   &::-webkit-scrollbar {
     width: 1rem;
     margin-right: 1em;
+    padding: 0 2px;
   }
   &::-webkit-scrollbar-track {
     background: $secondary-color;
@@ -136,6 +137,7 @@ body {
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
     @include bg();
+    border: 2px solid $main-color;
   }
   &::-webkit-scrollbar-thumb:hover {
     background: $main-color;
@@ -181,7 +183,7 @@ body {
   transform: translateY(100%);
 }
 
-#home {
+#home-page {
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -297,9 +299,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 3vw;
-    background: $secondary-color;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    // background: $secondary-color;
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    //   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
     .nav-img {
       position: relative;
@@ -508,6 +510,12 @@ body {
     }
   }
 
+  .small-nav-active {
+    background: $secondary-color;
+    box-shadow: rgba(0, 147, 233, 0.53) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
   // Home-Page
   #home {
     padding-top: 15vh;
@@ -639,6 +647,66 @@ body {
   }
 }
 
+// secondary home
+
+#secondary-home {
+  display: none;
+  position: relative;
+  min-height: 100vh;
+  @include bg();
+
+  .top-content {
+    background: #fff;
+    width: 100%;
+    height: 60vh;
+    padding-top: 10vh;
+    clip-path: ellipse(95% 50% at 50% 40%);
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    z-index: 10;
+    top: 55%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .page-title {
+      font-size: 9rem;
+      font-weight: bolder;
+      color: #fff;
+      font-family: $heading;
+    }
+
+    .page-btn {
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background: #fff;
+      border-radius: 5px;
+      color: rgba(0, 147, 233, 0.8);
+    }
+    i {
+      margin-top: 5vh;
+      color: #fff;
+      font-weight: bolder;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #home {
+    display: none;
+  }
+
+  #secondary-home {
+    display: block !important;
+  }
+}
+
 // About Page
 
 #about {
@@ -689,7 +757,6 @@ body {
     gap: 1vh;
     p {
       font-size: 1.6vw;
-      padding-right: 5vw;
     }
   }
 }
@@ -736,13 +803,14 @@ body {
 
 @media only screen and (max-width: 576px) {
   #about-left {
+    display: none !important;
     height: 40vh !important;
     padding: 5vh !important;
   }
   #about-right {
     height: 70vh !important;
     padding: 2em !important;
-    margin-top: 3vh !important;
+    margin-top: 5vh !important;
     p {
       text-align: center;
       font-size: 2.5vh !important;
@@ -899,6 +967,14 @@ body {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  #event {
+    .header {
+      margin-bottom: 10vh !important;
+    }
+  }
+}
+
 // gallery section
 
 #gallery {
@@ -940,6 +1016,10 @@ body {
     width: 100%;
     margin-top: 3rem;
 
+    i {
+      margin: 0 1vw 0 1vw;
+    }
+
     @include s-grad-button();
     .btn-grad {
       text-decoration: none;
@@ -951,6 +1031,13 @@ body {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  #gallery {
+    .header {
+      margin-bottom: 10vh !important;
+    }
+  }
+}
 // Blog Section
 
 // #new-blog {
@@ -1211,9 +1298,18 @@ body {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  #blog {
+    .header {
+      margin-bottom: 5vh !important;
+    }
+  }
+}
+
 // Sponsor Section
 
 #sponsor {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background: $secondary-color;

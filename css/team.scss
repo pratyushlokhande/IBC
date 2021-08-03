@@ -33,25 +33,52 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   font-family: $body-font;
+  background: url(../assets/images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 #header {
   padding: 5rem 0;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   position: relative;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  // background-color: #0093e9;
+  // background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background: url(../assets/images/team.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 147, 233, 0.3);
+  }
 
   #page-title {
+    position: absolute;
+    z-index: 5;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    font-size: 15vh;
+    font-size: 20vh;
     font-weight: bolder;
     font-family: $heading;
     color: $secondary-color;
+    // @include grad-text;
   }
 
   #team-image {
+    display: none !important;
+    position: relative;
+    z-index: 5;
     width: 100%;
     display: grid;
     place-items: center;
