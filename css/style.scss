@@ -652,14 +652,14 @@ body {
 #secondary-home {
   display: none;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   @include bg();
 
   .top-content {
     background: #fff;
     width: 100%;
     height: 60vh;
-    padding-top: 10vh;
+    // padding-top: 5vh;
     clip-path: ellipse(95% 50% at 50% 40%);
   }
 
@@ -668,7 +668,7 @@ body {
     height: 50vh;
     position: absolute;
     z-index: 10;
-    top: 55%;
+    top: 50%;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -690,7 +690,8 @@ body {
       color: rgba(0, 147, 233, 0.8);
     }
     i {
-      margin-top: 5vh;
+      position: absolute;
+      bottom: 2vh;
       color: #fff;
       font-weight: bolder;
     }
