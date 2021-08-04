@@ -49,6 +49,18 @@
     <link rel="stylesheet" href="./css/timeline.css" />
   </head>
   <body>
+
+    <!-- Intro Slider -->
+    <div class="intro">
+      <div class="intro-text">
+        <h1 class="hide"><span class="text">EVENT</span></h1>
+        <h1 class="hide"><span class="text">TIMELINE</span></h1>
+        <!-- <h1 class="hide"><span class="text">Consortium</span></h1> -->
+      </div>
+    </div>
+    <div class="slider"></div>
+    <!-- Intro Slider End -->
+
     <section id="header">
       <div id="team-image" class="container">
         <img src="./assets/svg/Timeline-amico.svg" alt="" />
@@ -360,13 +372,20 @@
 
       var rellax = new Rellax('.rellax');
 
+
+      // Intro Slider
       const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
+      tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
+      tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
+      tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
       tl.fromTo("#header", { opacity: 0 }, { opacity: 1, duration: 1 });
       tl.fromTo("#header", { y: "-100%" }, { y: "0%", duration: 1 }, "-=1");
       tl.fromTo("#team-image", { opacity: 0 }, { opacity: 1, duration: 1 });
       tl.fromTo("#page-title", {opacity: 0}, {opacity: 1, duration: 1});
       tl.fromTo("#page-title", { y: "10%" }, { y: "0%", duration: 1 }, "-=1");
+
+      
 
     </script>
 

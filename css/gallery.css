@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oregano&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
@@ -19,6 +18,64 @@ body {
   width: 100%;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+}
+
+body::-webkit-scrollbar {
+  width: 1rem;
+  margin-right: 1em;
+  padding: 0 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px #0093e9;
+          box-shadow: inset 0 0 5px #0093e9;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  border: 2px solid #0093e9;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #0093e9;
+}
+
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5000;
+  background: #0093e9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro .hide {
+  font-size: 5vw;
+  font-family: "Montserrat", sans-serif;
+  background: #0093e9;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+.intro .hide .text {
+  display: inline-block !important;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 #sidebar-nav {
@@ -243,7 +300,7 @@ body {
 }
 
 #home-page {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 #home-page #img-container {
@@ -358,7 +415,7 @@ body {
   width: 100%;
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 10vw;
+  font-size: 5vw;
   font-weight: bolder;
   background: #0093e9;
   background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
@@ -366,7 +423,14 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+@media only screen and (max-width: 576px) {
+  #header .page-heading {
+    font-size: 5vh;
+  }
+}
+
 #header .page-nav {
+  display: none !important;
   margin-top: 2em;
   width: 100%;
   display: -webkit-box;
@@ -417,7 +481,7 @@ body {
 }
 
 #gallery {
-  margin: 10vh 0;
+  margin: 5vh 0 10vh 0;
   width: 100%;
   min-height: 100vh;
 }
@@ -727,7 +791,7 @@ body {
 }
 
 #quote {
-  height: 50vh;
+  width: 100%;
   font-family: "Special Elite", cursive;
   color: rgba(0, 147, 233, 0.53);
   display: -webkit-box;
@@ -743,41 +807,60 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 2vh;
 }
 
-#quote blockquote {
-  font-weight: 100;
-  font-size: 2rem;
-  max-width: 600px;
-  line-height: 1.4;
+#quote .blockquote {
+  padding: 60px 80px 40px;
   position: relative;
-  margin: 0;
-  padding: 0.5rem;
 }
 
-#quote blockquote:before,
-#quote blockquote:after {
+#quote .blockquote p {
+  font-family: "Special Elite", cursive;
+  font-size: 2vw;
+  font-weight: 700px;
+  text-align: center;
+}
+
+#quote .blockquote:before {
   position: absolute;
-  color: rgba(0, 147, 233, 0.53);
-  font-size: 8rem;
-  width: 4rem;
-  height: 4rem;
+  top: 0;
+  content: "\201C";
+  font-size: 200px;
+  color: rgba(0, 0, 0, 0.1);
 }
 
-#quote blockquote:before {
-  content: "“";
-  left: -5rem;
-  top: -2rem;
+#quote .blockquote::after {
+  content: "";
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  border-bottom: 3px solid #0093e9;
+  height: 3px;
+  width: 200px;
 }
 
-#quote blockquote:after {
-  content: "”";
-  right: -5rem;
-  bottom: 1rem;
+@media only screen and (max-width: 576px) {
+  #quote .blockquote p {
+    font-size: 2vh;
+  }
+  #quote .blockquote::after {
+    width: 100px;
+  }
 }
 
-#quote cite {
-  line-height: 3;
-  text-align: left;
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .active.carousel-item-left,
+  .carousel-item-prev:not(.carousel-item-right) {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  .active.carousel-item-right,
+  .carousel-item-next:not(.carousel-item-left) {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
 }
 /*# sourceMappingURL=gallery.css.map */

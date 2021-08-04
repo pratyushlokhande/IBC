@@ -49,7 +49,18 @@
     <link rel="stylesheet" href="./css/team.css" />
   </head>
   <body>
-    <section id="header">
+    <!-- Intro Slider -->
+    <div class="intro">
+      <div class="intro-text">
+        <h1 class="hide"><span class="text">OUR</span></h1>
+        <h1 class="hide"><span class="text">TEAM</span></h1>
+        <!-- <h1 class="hide"><span class="text">Consortium</span></h1> -->
+      </div>
+    </div>
+    <div class="slider"></div>
+    <!-- Intro Slider End -->
+
+    <section id="header" class="transition-fade">
       <div class="wrapper"></div>
       <div id="page-title" class="container">OUR TEAM</div>
       <div id="team-image" class="container">
@@ -57,7 +68,7 @@
       </div>
     </section>
 
-    <main id="team">
+    <main id="team" class="transition-fade">
       <div class="container">
         <div id="team-container" class="row no-gutters justify-content-center">
           <!-- COORDINATOR -->
@@ -984,19 +995,10 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <script>
-      AOS.init({
-        disable: function () {
-          var maxWidth = 800;
-          return window.innerWidth < maxWidth;
-        },
-      });
+    <!-- Swup JS -->
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 
-      const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
-      tl.fromTo("#page-title", { opacity: 0 }, { opacity: 1, duration: 1 });
-      tl.fromTo("#page-title", { y: "50%" }, { y: "0%", duration: 1 }, "-=1");
-      tl.fromTo("#team-image", { opacity: 0 }, { opacity: 1, duration: 1 });
-    </script>
+    <!-- Importing Team Script JS -->
+    <script src="./js/team_script.js"></script>
   </body>
 </html>
