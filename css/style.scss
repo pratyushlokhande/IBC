@@ -144,33 +144,92 @@ body {
   }
 }
 
-// Intro Slider
+// logo anim
 
-.intro {
+.logo-anim {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: 5000;
-  background: $main-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  @include bg;
+  #logo {
+    width: 30%;
+    stroke: $secondary-color;
+    // filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 3px #bff1ff)
+    //   drop-shadow(0px 0px 30px #80e3ff) drop-shadow(0px 0px 50px #0093e9);
+  }
 
-  .hide {
-    font-size: 5vw;
-    font-family: $heading;
-    background: $main-color;
-    overflow: hidden;
-    color: $secondary-color;
+  #logo path:nth-child(1) {
+    stroke-dasharray: 1695;
+    stroke-dashoffset: 1695;
+  }
+  #logo path:nth-child(2) {
+    stroke-dasharray: 142;
+    stroke-dashoffset: 142;
+  }
 
-    .text {
-      display: inline-block !important;
-      transform: translateY(100%);
-    }
+  #logo path:nth-child(3) {
+    stroke-dasharray: 2240;
+    stroke-dashoffset: 2240;
+  }
+
+  #logo path:nth-child(4) {
+    stroke-dasharray: 2354;
+    stroke-dashoffset: 2354;
+  }
+
+  #logo path:nth-child(5) {
+    stroke-dasharray: 462;
+    stroke-dashoffset: 462;
+  }
+
+  #logo path:nth-child(6) {
+    stroke-dasharray: 469;
+    stroke-dashoffset: 469;
+  }
+
+  #logo path:nth-child(7) {
+    stroke-dasharray: 393;
+    stroke-dashoffset: 393;
+  }
+
+  #logo path:nth-child(8) {
+    stroke-dasharray: 715;
+    stroke-dashoffset: 715;
   }
 }
+
+// Intro Slider
+
+// .intro {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 5000;
+//   background: $main-color;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   .hide {
+//     font-size: 5vw;
+//     font-family: $heading;
+//     background: $main-color;
+//     overflow: hidden;
+//     color: $secondary-color;
+
+//     .text {
+//       display: inline-block !important;
+//       transform: translateY(100%);
+//     }
+//   }
+// }
 
 .slider {
   position: fixed;
