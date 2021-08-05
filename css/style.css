@@ -731,20 +731,36 @@ body::-webkit-scrollbar-thumb:hover {
 
 #about {
   min-height: 100vh;
-  background: #fff;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 
 #about .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 1vh;
   width: 100%;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 20vw;
   font-weight: bolder;
+  background: #0093e9;
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#about #about-heading span {
+  display: inline-block;
   background: #0093e9;
   background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   -webkit-background-clip: text;
@@ -758,7 +774,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 #about #about-left,
 #about #about-right {
-  height: 80vh;
+  min-height: 70vh;
 }
 
 #about #about-left {
@@ -794,62 +810,54 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 1vh;
+  padding: 0 3vw;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 }
 
 #about #about-right p {
-  font-size: 1.6vw;
+  font-size: 1.5vw;
+  font-weight: 100;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#about #about-right span {
+  display: inline-block;
 }
 
 @media only screen and (max-width: 1200px) {
   #about-left {
-    height: 75vh !important;
-    padding: 5vh !important;
+    display: none !important;
   }
   #about-right {
-    height: 75vh !important;
-    padding: 10vh !important;
-    padding-top: 0 !important;
+    width: 95vw !important;
+    margin-left: 5vw !important;
   }
   #about-right p {
-    text-align: center;
-    font-size: 2rem !important;
+    padding: 0 5vw !important;
+    font-size: 2vh !important;
   }
 }
 
 @media only screen and (max-width: 992px) {
-  #about-left,
-  #about-right {
-    height: 50vh !important;
-    padding: 5vh !important;
-  }
-  #about-left img {
-    width: 100%;
-  }
-  #about-right {
-    padding-right: 0 !important;
-    padding-top: 3vh !important;
-  }
   #about-right p {
-    text-align: center;
-    font-size: 2.5vh !important;
+    font-size: 2vh !important;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  #about-left {
-    display: none !important;
-    height: 40vh !important;
-    padding: 5vh !important;
-  }
   #about-right {
-    height: 70vh !important;
-    padding: 2em !important;
-    margin-top: 5vh !important;
+    padding: 0 5vw !important;
   }
   #about-right p {
-    text-align: center;
-    font-size: 2.5vh !important;
+    font-size: 2vh !important;
   }
 }
 
@@ -871,6 +879,23 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 20vw;
   font-weight: bolder;
+  background: #0093e9;
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#event .header span {
+  display: inline-block;
   background: #0093e9;
   background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   -webkit-background-clip: text;
@@ -1024,12 +1049,6 @@ body::-webkit-scrollbar-thumb:hover {
   background: #0093e9;
 }
 
-@media only screen and (max-width: 576px) {
-  #event .header {
-    margin-bottom: 10vh !important;
-  }
-}
-
 #gallery {
   min-height: 100vh;
   width: 100%;
@@ -1044,6 +1063,23 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 20vw;
   font-weight: bolder;
+  background: #0093e9;
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#gallery .header span {
+  display: inline-block;
   background: #0093e9;
   background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   -webkit-background-clip: text;
@@ -1124,12 +1160,6 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Montserrat", sans-serif;
 }
 
-@media only screen and (max-width: 576px) {
-  #gallery .header {
-    margin-bottom: 10vh !important;
-  }
-}
-
 #blog {
   width: 100%;
   min-height: 100vh;
@@ -1146,6 +1176,23 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 20vw;
   font-weight: bolder;
+  background: #0093e9;
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#blog .header span {
+  display: inline-block;
   background: #0093e9;
   background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   -webkit-background-clip: text;
@@ -1347,6 +1394,23 @@ body::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sponsor .header span {
+  display: inline-block;
+  background: #0093e9;
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #sponsor #sponsor-container {
@@ -1507,7 +1571,6 @@ body::-webkit-scrollbar-thumb:hover {
   min-height: 100vh;
   background: #fff;
   width: 100%;
-  margin-bottom: 5em;
 }
 
 #team .header {
@@ -1517,6 +1580,23 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 20vw;
   font-weight: bolder;
+  background: #0093e9;
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#team .header span {
+  display: inline-block;
   background: #0093e9;
   background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   -webkit-background-clip: text;
@@ -1642,6 +1722,23 @@ body::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#message .header span {
+  display: inline-block;
+  background: #0093e9;
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #message #message-container {
@@ -1729,6 +1826,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100%;
   background: #fff;
   margin-bottom: 5em;
+  overflow-x: hidden;
 }
 
 #contact .header {
@@ -1738,6 +1836,23 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 20vw;
   font-weight: bolder;
+  background: #0093e9;
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .header span {
+  display: inline-block;
   background: #0093e9;
   background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   -webkit-background-clip: text;
@@ -1787,30 +1902,30 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 0.2em;
   -webkit-box-shadow: #fff 0px 6px 12px -2px, #0093e9 0px 3px 7px -3px;
           box-shadow: #fff 0px 6px 12px -2px, #0093e9 0px 3px 7px -3px;
-  -webkit-transition: -webkit-box-shadow 250ms ease-in-out;
-  transition: -webkit-box-shadow 250ms ease-in-out;
-  transition: box-shadow 250ms ease-in-out;
-  transition: box-shadow 250ms ease-in-out, -webkit-box-shadow 250ms ease-in-out;
+  -webkit-transition: -webkit-box-shadow 100ms ease-in-out;
+  transition: -webkit-box-shadow 100ms ease-in-out;
+  transition: box-shadow 100ms ease-in-out;
+  transition: box-shadow 100ms ease-in-out, -webkit-box-shadow 100ms ease-in-out;
 }
 
 #contact .contact-right input::-webkit-input-placeholder,
 #contact .contact-right textarea::-webkit-input-placeholder {
-  color: #80d0c7;
+  color: #0093e9;
 }
 
 #contact .contact-right input:-ms-input-placeholder,
 #contact .contact-right textarea:-ms-input-placeholder {
-  color: #80d0c7;
+  color: #0093e9;
 }
 
 #contact .contact-right input::-ms-input-placeholder,
 #contact .contact-right textarea::-ms-input-placeholder {
-  color: #80d0c7;
+  color: #0093e9;
 }
 
 #contact .contact-right input::placeholder,
 #contact .contact-right textarea::placeholder {
-  color: #80d0c7;
+  color: #0093e9;
 }
 
 #contact .contact-right input:focus,

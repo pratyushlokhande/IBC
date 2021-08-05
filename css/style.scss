@@ -361,7 +361,7 @@ body {
     // background: $secondary-color;
     // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     //   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
+    // transition: all 250ms ease;
     .nav-img {
       position: relative;
       display: flex;
@@ -771,19 +771,26 @@ body {
 
 #about {
   min-height: 100vh;
-  background: $secondary-color;
+  // background: $secondary-color;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 
   .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 1vh;
     width: 100%;
     text-align: center;
     font-family: $heading;
     font-size: 20vw;
     font-weight: bolder;
+    @include grad-text();
+  }
+  #about-heading span {
+    display: inline-block;
     @include grad-text();
   }
   #about-content {
@@ -793,7 +800,7 @@ body {
 
   #about-left,
   #about-right {
-    height: 80vh;
+    min-height: 70vh;
     // margin: 0;
   }
 
@@ -808,72 +815,56 @@ body {
     }
   }
   #about-right {
-    // padding: 0 5vw 5vw 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
-    gap: 1vh;
+    padding: 0 3vw;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    @include bg;
     p {
-      font-size: 1.6vw;
+      font-size: 1.5vw;
+      font-weight: 100;
+      color: $secondary-color;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    span {
+      display: inline-block;
     }
   }
 }
 
 @media only screen and (max-width: 1200px) {
   #about-left {
-    height: 75vh !important;
-    padding: 5vh !important;
+    display: none !important;
   }
 
   #about-right {
-    height: 75vh !important;
-    padding: 10vh !important;
-    padding-top: 0 !important;
+    width: 95vw !important;
+    margin-left: 5vw !important;
     p {
-      text-align: center;
-      font-size: 2rem !important;
+      padding: 0 5vw !important;
+      font-size: 2vh !important;
     }
   }
 }
 
 @media only screen and (max-width: 992px) {
-  #about-left,
   #about-right {
-    height: 50vh !important;
-    padding: 5vh !important;
-  }
-
-  #about-left {
-    img {
-      width: 100%;
-    }
-  }
-  #about-right {
-    // justify-content: flex-start !important;
-    padding-right: 0 !important;
-    padding-top: 3vh !important;
     p {
-      text-align: center;
-      font-size: 2.5vh !important;
+      font-size: 2vh !important;
     }
   }
 }
 
 @media only screen and (max-width: 576px) {
-  #about-left {
-    display: none !important;
-    height: 40vh !important;
-    padding: 5vh !important;
-  }
   #about-right {
-    height: 70vh !important;
-    padding: 2em !important;
-    margin-top: 5vh !important;
+    padding: 0 5vw !important;
     p {
-      text-align: center;
-      font-size: 2.5vh !important;
+      font-size: 2vh !important;
     }
   }
 }
@@ -898,6 +889,13 @@ body {
     font-size: 20vw;
     font-weight: bolder;
     @include grad-text();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      display: inline-block;
+      @include grad-text;
+    }
   }
 
   .row {
@@ -1027,14 +1025,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 576px) {
-  #event {
-    .header {
-      margin-bottom: 10vh !important;
-    }
-  }
-}
-
 // gallery section
 
 #gallery {
@@ -1051,6 +1041,14 @@ body {
     font-size: 20vw;
     font-weight: bolder;
     @include grad-text();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: inline-block;
+      @include grad-text;
+    }
   }
 
   #gallery-container {
@@ -1091,13 +1089,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 576px) {
-  #gallery {
-    .header {
-      margin-bottom: 10vh !important;
-    }
-  }
-}
 // Blog Section
 
 // #new-blog {
@@ -1244,6 +1235,14 @@ body {
     font-size: 20vw;
     font-weight: bolder;
     @include grad-text();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: inline-block;
+      @include grad-text;
+    }
   }
 
   .blog-page {
@@ -1383,6 +1382,14 @@ body {
     font-size: 20vw;
     font-weight: bolder;
     @include grad-text();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: inline-block;
+      @include grad-text;
+    }
   }
 
   #sponsor-container {
@@ -1518,7 +1525,6 @@ body {
   min-height: 100vh;
   background: $secondary-color;
   width: 100%;
-  margin-bottom: 5em;
 
   .header {
     margin-top: 1vh;
@@ -1528,6 +1534,14 @@ body {
     font-size: 20vw;
     font-weight: bolder;
     @include grad-text();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: inline-block;
+      @include grad-text;
+    }
   }
 
   #team-container {
@@ -1633,6 +1647,14 @@ body {
     font-size: 20vw;
     font-weight: bolder;
     @include grad-text();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: inline-block;
+      @include grad-text;
+    }
   }
 
   #message-container {
@@ -1719,6 +1741,7 @@ body {
   width: 100%;
   background: $secondary-color;
   margin-bottom: 5em;
+  overflow-x: hidden;
 
   .header {
     margin-top: 1vh;
@@ -1728,6 +1751,14 @@ body {
     font-size: 20vw;
     font-weight: bolder;
     @include grad-text();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: inline-block;
+      @include grad-text;
+    }
   }
 
   #contact-container {
@@ -1757,10 +1788,10 @@ body {
       border-radius: 0.2em;
       box-shadow: $secondary-color 0px 6px 12px -2px,
         $main-color 0px 3px 7px -3px;
-      transition: box-shadow 250ms ease-in-out;
+      transition: box-shadow 100ms ease-in-out;
 
       &::placeholder {
-        color: $placeholder-color;
+        color: $main-color;
       }
 
       &:focus {
@@ -1822,7 +1853,6 @@ body {
 footer {
   @include bg();
   padding-bottom: 5rem;
-
   #two,
   #three {
     .text-muted {
