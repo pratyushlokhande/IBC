@@ -124,24 +124,24 @@ body {
     padding: 0;
   }
 
-  &::-webkit-scrollbar {
-    width: 1rem;
-    margin-right: 1em;
-    padding: 0 2px;
-  }
-  &::-webkit-scrollbar-track {
-    background: $secondary-color;
-    border-radius: 10px;
-    box-shadow: inset 0 0 5px $main-color;
-  }
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    @include bg();
-    border: 2px solid $main-color;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: $main-color;
-  }
+  // &::-webkit-scrollbar {
+  //   width: 1rem;
+  //   margin-right: 1em;
+  //   padding: 0 2px;
+  // }
+  // &::-webkit-scrollbar-track {
+  //   background: $secondary-color;
+  //   border-radius: 10px;
+  //   box-shadow: inset 0 0 5px $main-color;
+  // }
+  // &::-webkit-scrollbar-thumb {
+  //   border-radius: 10px;
+  //   @include bg();
+  //   border: 2px solid $main-color;
+  // }
+  // &::-webkit-scrollbar-thumb:hover {
+  //   background: $main-color;
+  // }
 }
 
 // logo anim
@@ -240,6 +240,11 @@ body {
   z-index: 5000;
   background: $secondary-color;
   transform: translateY(100%);
+}
+
+.smooth-scroll {
+  width: 100%;
+  min-height: 100vh;
 }
 
 #home-page {
@@ -1060,6 +1065,7 @@ body {
     img {
       width: 100%;
       height: 100%;
+      border: 10px solid $secondary-color;
       @include shadow();
       transition: all 250ms ease-in-out;
 
@@ -1320,6 +1326,7 @@ body {
         }
 
         .thumb {
+          border: 15px solid $secondary-color;
           padding-bottom: 60%;
           background-size: cover;
           background-position: center center;
@@ -1392,131 +1399,226 @@ body {
     }
   }
 
-  #sponsor-container {
+  #cards {
+    position: relative;
     width: 100%;
-    margin: 0;
+    min-height: 100vh;
 
-    .sp-card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    @media only screen and (max-width: 768px) {
+      margin-top: 5vh;
     }
 
-    & .card {
+    .container-fluid {
       position: relative;
+      width: 100%;
+    }
+
+    .card-holder {
+      padding: 2vw;
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border: 5px solid $secondary-color;
       border-radius: 10px;
-      border: none;
-      background: $secondary-color;
-    }
+      overflow: hidden;
+      box-shadow: 5px 10px 30px $main-color;
 
-    & .card .icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: $secondary-color;
-      transition: 0.7s;
-      z-index: 1;
-    }
+      .back {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 8vw;
+        @include grad-text;
 
-    & .card .icon .fa {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 80px;
-      transition: 0.7s;
-      color: $secondary-color;
-    }
+        @media only screen and (max-width: 768px) {
+          font-size: 10vh;
+        }
+      }
 
-    i {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 100px;
-      transition: 0.7s;
-      color: $main-color;
-    }
+      .front {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 2vw;
+        @include bg;
+        clip-path: circle(0% at 0% 0%);
+        transition: clip-path 250ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    & .card .face {
-      width: 100%;
-      height: 250px;
-      transition: 0.5s;
+        h1 {
+          color: $secondary-color;
+          margin: 0;
+          opacity: 0;
+          transform: translatey(-100%);
+          transition: all 500ms ease;
+        }
 
-      h3 {
-        font-family: $h-font;
-        color: $main-color;
+        a {
+          position: absolute;
+          right: 5%;
+          bottom: 5%;
+          opacity: 0;
+          transform: translatex(100%);
+          transition: all 500ms ease-in-out;
+          i {
+            font-size: 2rem;
+            color: #fff;
+          }
+        }
+      }
+      &:hover .front {
+        clip-path: circle(75%);
+
+        p,
+        h1 {
+          opacity: 1;
+          transform: translatey(0);
+        }
+
+        a {
+          opacity: 1;
+          transform: translatex(0);
+        }
       }
     }
-
-    & .card .face.face1 {
-      position: relative;
-      background: $secondary-color;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-      transform: translateY(125px);
-    }
-
-    & .card:hover .face.face1 {
-      background: $main-color;
-      transform: translateY(0px);
-    }
-
-    & .card .face.face1 .content {
-      opacity: 1;
-      transition: 0.5s;
-    }
-
-    & .card:hover .face.face1 .content {
-      opacity: 1;
-    }
-
-    & .card .face.face1 .content i {
-      max-width: 100px;
-    }
-
-    & .card .face.face2 {
-      position: relative;
-      background: $secondary-color;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      box-sizing: border-box;
-      // box-shadow: 0 20px 50px $main-color;
-      @include shadow();
-      transform: translateY(-100px);
-    }
-
-    & .card:hover .face.face2 {
-      transform: translateY(0);
-    }
-
-    & .card .face.face2 .content p {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      color: rgba(0, 147, 233, 0.53);
-    }
-
-    & .card .face.face2 .content h3 {
-      margin: 0 0 10px 0;
-      padding: 0;
-      // color: #fff;
-      font-size: 24px;
-      text-align: center;
-      // color: #414141;
-    }
-
-    & a {
-      text-decoration: none;
-      color: $main-color;
-    }
   }
+
+  // #sponsor-container {
+  //   width: 100%;
+  //   margin: 0;
+
+  //   .sp-card {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //   }
+
+  //   & .card {
+  //     position: relative;
+  //     border-radius: 10px;
+  //     border: none;
+  //     background: $secondary-color;
+  //   }
+
+  //   & .card .icon {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     background: $secondary-color;
+  //     transition: 0.7s;
+  //     z-index: 1;
+  //   }
+
+  //   & .card .icon .fa {
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
+  //     font-size: 80px;
+  //     transition: 0.7s;
+  //     color: $secondary-color;
+  //   }
+
+  //   i {
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
+  //     font-size: 100px;
+  //     transition: 0.7s;
+  //     color: $main-color;
+  //   }
+
+  //   & .card .face {
+  //     width: 100%;
+  //     height: 250px;
+  //     transition: 0.5s;
+
+  //     h3 {
+  //       font-family: $h-font;
+  //       color: $main-color;
+  //     }
+  //   }
+
+  //   & .card .face.face1 {
+  //     position: relative;
+  //     background: $secondary-color;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     z-index: 1;
+  //     transform: translateY(125px);
+  //   }
+
+  //   & .card:hover .face.face1 {
+  //     background: $main-color;
+  //     transform: translateY(0px);
+  //   }
+
+  //   & .card .face.face1 .content {
+  //     opacity: 1;
+  //     transition: 0.5s;
+  //   }
+
+  //   & .card:hover .face.face1 .content {
+  //     opacity: 1;
+  //   }
+
+  //   & .card .face.face1 .content i {
+  //     max-width: 100px;
+  //   }
+
+  //   & .card .face.face2 {
+  //     position: relative;
+  //     background: $secondary-color;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     padding: 20px;
+  //     box-sizing: border-box;
+  //     // box-shadow: 0 20px 50px $main-color;
+  //     @include shadow();
+  //     transform: translateY(-100px);
+  //   }
+
+  //   & .card:hover .face.face2 {
+  //     transform: translateY(0);
+  //   }
+
+  //   & .card .face.face2 .content p {
+  //     margin: 0;
+  //     padding: 0;
+  //     text-align: center;
+  //     color: rgba(0, 147, 233, 0.53);
+  //   }
+
+  //   & .card .face.face2 .content h3 {
+  //     margin: 0 0 10px 0;
+  //     padding: 0;
+  //     // color: #fff;
+  //     font-size: 24px;
+  //     text-align: center;
+  //     // color: #414141;
+  //   }
+
+  //   & a {
+  //     text-decoration: none;
+  //     color: $main-color;
+  //   }
+  // }
 }
 
 // team page
@@ -1632,12 +1734,6 @@ body {
   min-height: 100vh;
   width: 100%;
   margin-bottom: 5em;
-  // background: $secondary-color;
-  background: url("https://cdn.pixabay.com/photo/2019/06/27/06/49/plane-4301615_960_720.png");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  // background-position: center;
 
   .header {
     margin-top: 1vh;
@@ -1678,7 +1774,12 @@ body {
         padding-left: 0;
         border-left: none;
         padding: 40px;
-        background: $secondary-color;
+        // background: $secondary-color;
+        background-image: radial-gradient(
+          circle farthest-corner at 10% 20%,
+          rgba(97, 186, 255, 1) 0%,
+          rgba(166, 239, 253, 1) 90.1%
+        );
         // box-shadow: 0px 7px 29px 0px $main-color;
         @include shadow();
 

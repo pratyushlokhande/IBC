@@ -33,30 +33,6 @@ body [class*="col-"] {
   padding: 0;
 }
 
-body::-webkit-scrollbar {
-  width: 1rem;
-  margin-right: 1em;
-  padding: 0 2px;
-}
-
-body::-webkit-scrollbar-track {
-  background: #fff;
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 5px #0093e9;
-          box-shadow: inset 0 0 5px #0093e9;
-}
-
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-  border: 2px solid #0093e9;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: #0093e9;
-}
-
 .logo-anim {
   position: fixed;
   top: 0;
@@ -126,6 +102,11 @@ body::-webkit-scrollbar-thumb:hover {
   background: #fff;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+}
+
+.smooth-scroll {
+  width: 100%;
+  min-height: 100vh;
 }
 
 #home-page {
@@ -1097,6 +1078,7 @@ body::-webkit-scrollbar-thumb:hover {
 #gallery #gallery-container img {
   width: 100%;
   height: 100%;
+  border: 10px solid #fff;
   -webkit-box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
           box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
   -webkit-transition: all 250ms ease-in-out;
@@ -1299,6 +1281,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #blog .blog-page .blog-content .card .thumb {
+  border: 15px solid #fff;
   padding-bottom: 60%;
   background-size: cover;
   background-position: center center;
@@ -1413,12 +1396,43 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-text-fill-color: transparent;
 }
 
-#sponsor #sponsor-container {
+#sponsor #cards {
+  position: relative;
   width: 100%;
-  margin: 0;
+  min-height: 100vh;
 }
 
-#sponsor #sponsor-container .sp-card {
+@media only screen and (max-width: 768px) {
+  #sponsor #cards {
+    margin-top: 5vh;
+  }
+}
+
+#sponsor #cards .container-fluid {
+  position: relative;
+  width: 100%;
+}
+
+#sponsor #cards .card-holder {
+  padding: 2vw;
+}
+
+#sponsor #cards .card {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 10px 30px #0093e9;
+          box-shadow: 5px 10px 30px #0093e9;
+}
+
+#sponsor #cards .card .back {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1428,143 +1442,87 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 8vw;
+  background: #0093e9;
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-#sponsor #sponsor-container .card {
-  position: relative;
-  border-radius: 10px;
-  border: none;
-  background: #fff;
+@media only screen and (max-width: 768px) {
+  #sponsor #cards .card .back {
+    font-size: 10vh;
+  }
 }
 
-#sponsor #sponsor-container .card .icon {
+#sponsor #cards .card .front {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  z-index: 1;
+  padding: 2vw;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-clip-path: circle(0% at 0% 0%);
+          clip-path: circle(0% at 0% 0%);
+  -webkit-transition: -webkit-clip-path 250ms ease-in-out;
+  transition: -webkit-clip-path 250ms ease-in-out;
+  transition: clip-path 250ms ease-in-out;
+  transition: clip-path 250ms ease-in-out, -webkit-clip-path 250ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#sponsor #sponsor-container .card .icon .fa {
+#sponsor #cards .card .front h1 {
+  color: #fff;
+  margin: 0;
+  opacity: 0;
+  -webkit-transform: translatey(-100%);
+          transform: translatey(-100%);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+#sponsor #cards .card .front a {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 80px;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  right: 5%;
+  bottom: 5%;
+  opacity: 0;
+  -webkit-transform: translatex(100%);
+          transform: translatex(100%);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+#sponsor #cards .card .front a i {
+  font-size: 2rem;
   color: #fff;
 }
 
-#sponsor #sponsor-container i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 100px;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  color: #0093e9;
+#sponsor #cards .card:hover .front {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
 }
 
-#sponsor #sponsor-container .card .face {
-  width: 100%;
-  height: 250px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#sponsor #sponsor-container .card .face h3 {
-  font-family: "Varela Round", sans-serif;
-  color: #0093e9;
-}
-
-#sponsor #sponsor-container .card .face.face1 {
-  position: relative;
-  background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 1;
-  -webkit-transform: translateY(125px);
-          transform: translateY(125px);
-}
-
-#sponsor #sponsor-container .card:hover .face.face1 {
-  background: #0093e9;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-}
-
-#sponsor #sponsor-container .card .face.face1 .content {
+#sponsor #cards .card:hover .front p,
+#sponsor #cards .card:hover .front h1 {
   opacity: 1;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transform: translatey(0);
+          transform: translatey(0);
 }
 
-#sponsor #sponsor-container .card:hover .face.face1 .content {
+#sponsor #cards .card:hover .front a {
   opacity: 1;
-}
-
-#sponsor #sponsor-container .card .face.face1 .content i {
-  max-width: 100px;
-}
-
-#sponsor #sponsor-container .card .face.face2 {
-  position: relative;
-  background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
-          box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
-}
-
-#sponsor #sponsor-container .card:hover .face.face2 {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-#sponsor #sponsor-container .card .face.face2 .content p {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: rgba(0, 147, 233, 0.53);
-}
-
-#sponsor #sponsor-container .card .face.face2 .content h3 {
-  margin: 0 0 10px 0;
-  padding: 0;
-  font-size: 24px;
-  text-align: center;
-}
-
-#sponsor #sponsor-container a {
-  text-decoration: none;
-  color: #0093e9;
+  -webkit-transform: translatex(0);
+          transform: translatex(0);
 }
 
 #team {
@@ -1705,10 +1663,6 @@ body::-webkit-scrollbar-thumb:hover {
   min-height: 100vh;
   width: 100%;
   margin-bottom: 5em;
-  background: url("https://cdn.pixabay.com/photo/2019/06/27/06/49/plane-4301615_960_720.png");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 #message .header {
@@ -1764,7 +1718,7 @@ body::-webkit-scrollbar-thumb:hover {
   padding-left: 0;
   border-left: none;
   padding: 40px;
-  background: #fff;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #61baff 0%, #a6effd 90.1%);
   -webkit-box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
           box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
   position: relative;

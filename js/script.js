@@ -1,3 +1,36 @@
+// ScrollTrigger register
+gsap.registerPlugin(ScrollTrigger);
+
+// locomotive scroll
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector(".smooth-scroll"),
+  smooth: true,
+});
+
+// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+locoScroll.on("scroll", ScrollTrigger.update);
+
+// tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+ScrollTrigger.scrollerProxy(".smooth-scroll", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  },
+  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+  pinType: document.querySelector(".smooth-scroll").style.transform
+    ? "transform"
+    : "fixed",
+});
+
 // Intro Slider
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
@@ -16,10 +49,6 @@ tl.from(
 );
 tl.from("#home-right", { opacity: 0, x: 100, duration: 2 }, "-=2.5");
 
-// Rellax Initialisation
-var rellax = new Rellax(".rellax", {
-  breakpoints: [576, 768, 1201],
-});
 // Full Screen Nav
 
 $("#toggle").click(function () {
@@ -108,14 +137,13 @@ headers.forEach((header) => {
 //   })
 //   .join("&nbsp;");
 
-gsap.registerPlugin(ScrollTrigger);
-
 let aboutTl = gsap.timeline({
   scrollTrigger: {
     trigger: "#about-right",
     start: "top center",
     end: "bottom bottom",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
 });
 
@@ -153,6 +181,7 @@ let aboutHtl = gsap.timeline({
     start: "top center",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
 });
 
@@ -170,6 +199,7 @@ gsap.from("#event-heading span", {
     start: "top center",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -198,6 +228,7 @@ gsap.from(".flip-box", {
     start: "bottom bottom",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -212,6 +243,7 @@ gsap.from("#gallery-heading span", {
     start: "top center",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -225,6 +257,7 @@ gsap.from(".g-image", {
     start: "top bottom",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -240,6 +273,7 @@ gsap.from("#blog-heading span", {
     start: "top center",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -253,6 +287,7 @@ gsap.from(".b-card", {
     start: "top bottom",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -268,6 +303,7 @@ gsap.from("#sponsor-heading span", {
     start: "top center",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -281,6 +317,7 @@ gsap.from(".sp-card", {
     start: "top bottom",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -296,6 +333,7 @@ gsap.from("#team-heading span", {
     start: "top center",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -309,6 +347,7 @@ gsap.from(".single-team", {
     start: "top bottom",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -324,6 +363,7 @@ gsap.from("#message-heading span", {
     start: "top center",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -337,6 +377,7 @@ gsap.from(".animate-box", {
     start: "top bottom",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -352,6 +393,7 @@ gsap.from("#contact-heading span", {
     start: "top center",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   y: 100,
   opacity: 0,
@@ -365,6 +407,7 @@ gsap.from("#c-left", {
     start: "top bottom",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   x: -200,
   opacity: 0,
@@ -378,6 +421,7 @@ gsap.from("#c-right", {
     start: "top bottom",
     end: "top top",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
   x: 200,
   opacity: 0,
@@ -393,7 +437,14 @@ let footer = gsap.timeline({
     start: "top center",
     end: "bottom bottom",
     scrub: 1,
+    scroller: ".smooth-scroll",
   },
 });
 
 footer.from("footer", { y: 100, opacity: 0, duration: 1 });
+
+// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+ScrollTrigger.refresh();

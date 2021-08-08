@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
+    <!-- locomotive scroll css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
     <!-- jQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -70,7 +73,7 @@
     </div> -->
     <div class="slider"></div>
     <!-- Intro Slider End -->
-
+<div class="smooth-scroll">
     <!-- Home Section -->
     <section id="home-page" class="panel">
         <!-- Nav-Bar -->
@@ -145,24 +148,24 @@
                 <div class="row">
                     <div id="home-left" class="col-xl-6 col-md-12 gap-1">
                         <div id="left-content" class="row no-gutters">
-                            <div class="title-text rellax" data-rellax-desktop-speed="5">
+                            <div class="title-text">
                                 Intellect<br />Browsers'<br />Consortium
                             </div>
-                            <div class="home-btn rellax" data-rellax-desktop-speed="4">
+                            <div class="home-btn">
                                 <a class="btn-grad" href="">Know More</a>
                             </div>
                             <div class="social-links">
                                 <ul class="links">
-                                    <a href="https://www.facebook.com/ibcManit16" class="social-item rellax" data-rellax-desktop-speed="4">
+                                    <a href="https://www.facebook.com/ibcManit16" class="social-item">
                                         <li><i class="fab fa-facebook-square"></i></li>
                                     </a>
-                                    <a href="https://www.instagram.com/ibc_manit/" class="social-item rellax" data-rellax-desktop-speed="3">
+                                    <a href="https://www.instagram.com/ibc_manit/" class="social-item">
                                         <li><i class="fab fa-instagram-square"></i></li>
                                     </a>
-                                    <a href="https://www.linkedin.com/in/intellect-browsers-consortium-manit-378b001a7/" class="social-item rellax" data-rellax-desktop-speed="2">
+                                    <a href="https://www.linkedin.com/in/intellect-browsers-consortium-manit-378b001a7/" class="social-item">
                                         <li><i class="fab fa-linkedin"></i></li>
                                     </a>
-                                    <a href="#" class="social-item rellax" data-rellax-desktop-speed="1">
+                                    <a href="#" class="social-item">
                                         <li><i class="fab fa-wordpress"></i></li>
                                     </a>
                                 </ul>
@@ -170,10 +173,10 @@
                         </div>
                     </div>
                     <div id="home-right" class="col-xl-6 col-md-12">
-                        <div class="container rellax" data-rellax-desktop-speed="3">
+                        <div class="container">
                             <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active" data-bs-interval="5000">
+                                    <div class="carousel-item active" data-bs-interval="8000">
                                         <a href="https://storyset.com/education">
                                             <img src="./assets/svg/Book lover-bro.svg" class="d-block w-100" alt="..." />
                                         </a>
@@ -414,7 +417,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <!-- event section end -->
@@ -695,7 +697,7 @@
         <div class="container-fluid">
             <div class="row no-gutters">
                 <div id="sponsor-heading" class="header">Sponsor</div>
-                <div id="sponsor-container" class="row no-gutters">
+                <!-- <div id="sponsor-container" class="row no-gutters">
                     <div class="col-xl-3 col-lg-6 col-sm-12 sp-card py-2 px-5">
                         <div class="card">
                             <div class="face face1">
@@ -849,7 +851,71 @@
                             </div>
                         </div>
                     </div>
+                </div> -->
+
+
+                <div id="cards">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12 card-holder">
+                                <div class="card sp-card">
+                                    <div class="front">
+                                        <h1>Apple</h1>
+                                        <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                    <div class="back"><i class="fab fa-apple"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 card-holder">
+                                <div class="card sp-card">
+                                    <div class="front">
+                                        <h1>Google</h1>
+                                        <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                    <div class="back"><i class="fab fa-google"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 card-holder">
+                                <div class="card sp-card">
+                                    <div class="front">
+                                        <h1>Microsoft</h1>
+                                        <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                    <div class="back"><i class="fab fa-microsoft"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 card-holder">
+                                <div class="card sp-card">
+                                    <div class="front">
+                                        <h1>Amazon</h1>
+                                        <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                    <div class="back"><i class="fab fa-amazon"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 card-holder">
+                                <div class="card sp-card">
+                                    <div class="front">
+                                        <h1>Spotify</h1>
+                                        <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                    <div class="back"><i class="fab fa-spotify"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 card-holder">
+                                <div class="card sp-card">
+                                    <div class="front">
+                                        <h1>Yahoo</h1>
+                                        <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                    <div class="back"><i class="fab fa-yahoo"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
         </div>
     </section>
@@ -1089,7 +1155,7 @@
         </div>
     </footer>
 
-
+</div>
 
     <!-- Includes -->
     <!-- Bootstrap JS -->
@@ -1101,8 +1167,8 @@
     <!-- Scroll trigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
 
-    <!-- Rellax JS -->
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <!-- Locomotive Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
     <!-- include js file -->
     <script type="text/javascript" src="./js/script.js"></script>
