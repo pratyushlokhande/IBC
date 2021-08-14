@@ -41,6 +41,7 @@ $secondary-color: #fff;
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   font-family: $comfortaa;
@@ -268,6 +269,10 @@ body {
 
 #home-page {
   height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   #img-container {
     width: 100%;
     height: 100vh;
@@ -339,6 +344,7 @@ body {
       top: 0;
       left: 0;
       background: rgba(0, 0, 100, 0.4);
+      background-blend-mode: multiply;
     }
     .page-content {
       position: absolute;
@@ -360,6 +366,7 @@ body {
 }
 
 #header {
+  position: relative;
   padding-top: 10vh;
   width: 100%;
   .page-heading {
@@ -372,6 +379,11 @@ body {
     // -webkit-text-fill-color: transparent;
     // color: #fff;
     @include grad-text;
+
+    span {
+      display: inline-block;
+      @include grad-text;
+    }
   }
 
   @media only screen and (max-width: 576px) {
@@ -424,6 +436,7 @@ body {
 }
 
 #gallery {
+  position: relative;
   margin: 5vh 0 10vh 0;
   width: 100%;
   min-height: 100vh;
@@ -445,6 +458,7 @@ body {
       width: 100%;
       overflow: hidden;
       box-shadow: -3px 9px 36px 0px rgba(33, 212, 253, 0.5);
+      border: 10px solid $secondary-color;
 
       .label {
         position: absolute;
@@ -509,11 +523,13 @@ body {
 }
 
 #footer {
+  position: relative;
   width: 100%;
   min-height: 30vh;
   padding: 5rem 0;
   background: #21d4fd;
   background: linear-gradient(to top right, #21d4fd 0%, #b721ff 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   .footer-container {
     width: 100%;
@@ -684,11 +700,12 @@ body {
 @import url("https://fonts.googleapis.com/css?family=Special+Elite");
 
 #quote {
+  position: relative;
   width: 100%;
   font-family: "Special Elite", cursive;
   // background: #fffdf5;
   // color: #3f3f5a;
-  color: rgba(0, 147, 233, 0.53);
+  color: $secondary-color; // rgba(59, 180, 250, 0.53);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -722,7 +739,7 @@ body {
     // margin-left: -100px;
     transform: translateX(-50%);
     position: absolute;
-    border-bottom: 3px solid $main-color;
+    border-bottom: 3px solid $secondary-color;
     height: 3px;
     width: 200px;
   }
