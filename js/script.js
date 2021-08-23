@@ -435,7 +435,7 @@ let footer = gsap.timeline({
   scrollTrigger: {
     trigger: "footer",
     start: "top center",
-    end: "bottom bottom",
+    end: "bottom bottom+=20%",
     scrub: 1,
     scroller: ".smooth-scroll",
   },

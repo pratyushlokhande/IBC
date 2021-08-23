@@ -19,8 +19,12 @@ $placeholder-color: #80d0c7;
 // mixin
 
 @mixin bg {
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background-color: $main-color;
+  background-image: linear-gradient(
+    160deg,
+    $main-color 0%,
+    $placeholder-color 100%
+  );
 }
 
 @mixin grad-button {
@@ -41,7 +45,7 @@ $placeholder-color: #80d0c7;
     transition: 0.5s;
     background-size: 200% auto;
     color: $secondary-color;
-    box-shadow: 0 0 20px #80d0c7;
+    box-shadow: 0 0 20px $placeholder-color;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -70,7 +74,7 @@ $placeholder-color: #80d0c7;
     transition: 0.5s;
     background-size: 200% auto;
     color: $secondary-color;
-    box-shadow: 0 0 20px #80d0c7;
+    box-shadow: 0 0 20px $placeholder-color;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -84,8 +88,8 @@ $placeholder-color: #80d0c7;
 }
 
 @mixin grad-text {
-  background: #0093e9;
-  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background: $main-color;
+  background: linear-gradient(160deg, $main-color 0%, $placeholder-color 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -160,7 +164,7 @@ body {
     width: 30%;
     stroke: $secondary-color;
     // filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 3px #bff1ff)
-    //   drop-shadow(0px 0px 30px #80e3ff) drop-shadow(0px 0px 50px #0093e9);
+    //   drop-shadow(0px 0px 30px #80e3ff) drop-shadow(0px 0px 50px $main-color);
   }
 
   #logo path:nth-child(1) {
