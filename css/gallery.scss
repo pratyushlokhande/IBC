@@ -12,6 +12,7 @@ $comfortaa: "Montserrat", sans-serif;
 
 $main-color: #0093e9;
 $secondary-color: #fff;
+$footer-color: #0a1d37;
 
 // mixin
 
@@ -50,7 +51,7 @@ body {
   // background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 
   &::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.8rem;
     margin-right: 1em;
     padding: 0 2px;
   }
@@ -58,6 +59,7 @@ body {
     background: $secondary-color;
     border-radius: 10px;
     box-shadow: inset 0 0 5px $main-color;
+    padding: 0 2px;
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
@@ -527,8 +529,9 @@ body {
   width: 100%;
   min-height: 30vh;
   padding: 5rem 0;
-  background: #21d4fd;
-  background: linear-gradient(to top right, #21d4fd 0%, #b721ff 100%);
+  // background: #21d4fd;
+  // background: linear-gradient(to top right, #21d4fd 0%, #b721ff 100%);
+  background: $footer-color;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   .footer-container {

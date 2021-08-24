@@ -12,9 +12,11 @@ $heading: "Montserrat", sans-serif;
 
 // Colors
 $main-color: #0093e9;
+// $main-color: #0a1d37;
 $secondary-color: #fff;
 $counter-color: #b31217;
 $placeholder-color: #80d0c7;
+$footer-color: #0a1d37;
 
 // mixin
 
@@ -1959,7 +1961,10 @@ body {
 // footer
 
 footer {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   @include bg();
+  // background: $footer-color;
   padding-bottom: 5rem;
   #two,
   #three {

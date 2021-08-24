@@ -392,9 +392,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100%;
   min-height: 30vh;
   padding: 5rem 0;
-  background: #21d4fd;
-  background: -webkit-gradient(linear, left bottom, right top, from(#21d4fd), to(#b721ff));
-  background: linear-gradient(to top right, #21d4fd 0%, #b721ff 100%);
+  background: #0a1d37;
 }
 
 #footer .footer-container {

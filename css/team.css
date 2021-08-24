@@ -10,39 +10,18 @@
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
   font-family: "Josefin Sans", sans-serif;
-  background: url(../assets/images/resul-mentes-DbwYNr8RPbg-unsplash.jpg);
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
+  background-color: #fff;
 }
 
-body::-webkit-scrollbar {
-  width: 1rem;
-  margin-right: 1em;
-  padding: 0 2px;
-}
-
-body::-webkit-scrollbar-track {
-  background: #fff;
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 5px #0093e9;
-          box-shadow: inset 0 0 5px #0093e9;
-}
-
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-  border: 2px solid #0093e9;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: #0093e9;
+.smooth-scroll {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .intro {
@@ -311,9 +290,7 @@ main #team-container .single-team:hover .team-image img {
   width: 100%;
   min-height: 30vh;
   padding: 5rem 0;
-  background: #21d4fd;
-  background: -webkit-gradient(linear, left bottom, right top, from(#21d4fd), to(#b721ff));
-  background: linear-gradient(to top right, #21d4fd 0%, #b721ff 100%);
+  background: #0a1d37;
 }
 
 #footer .footer-container {
