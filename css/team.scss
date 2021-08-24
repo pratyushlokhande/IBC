@@ -38,9 +38,9 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   font-family: $body-font;
-  background: url(../assets/images/bg.jpg);
+  background: url(../assets/images/resul-mentes-DbwYNr8RPbg-unsplash.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
 
   &::-webkit-scrollbar {
@@ -123,6 +123,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 147, 233, 0.3);
+    background-blend-mode: multiply;
   }
 
   #page-title {
@@ -187,12 +188,21 @@ main {
     }
 
     .single-team {
+      position: relative;
       width: 17rem;
       height: 30rem;
+    }
+    .single-team .team-image {
+      position: relative;
+      width: 100%;
+      height: 60%;
     }
     .single-team .team-image img {
       width: 100%;
       height: 100%;
+      object-fit: center;
+      object-position: center;
+      filter: grayscale(100%);
       box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
       transition: box-shadow 250ms ease-in-out;
     }
@@ -232,10 +242,13 @@ main {
       visibility: hidden;
       transition: all 0.4s ease-out 0s;
       display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
     }
     .single-team .team-content .social li {
-      display: inline-block;
-      margin-right: auto;
+      display: flex;
+      // margin-right: auto;
     }
     .single-team .team-content .social li a {
       width: 30px;
