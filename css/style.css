@@ -497,6 +497,7 @@ body [class*="col-"] {
 }
 
 #home-page #home {
+  position: relative;
   padding-top: 15vh;
   padding: 15vh 5vw 10vh 5vw;
 }
@@ -1085,6 +1086,7 @@ body [class*="col-"] {
 }
 
 #gallery #gallery-container img {
+  position: relative;
   width: 100%;
   height: 100%;
   border: 10px solid #fff;
@@ -1278,6 +1280,11 @@ body [class*="col-"] {
       -ms-flex: 1;
           flex: 1;
   line-height: 1.4;
+}
+
+#blog .blog-page .blog-content .card p span {
+  color: #0093e9;
+  text-transform: none;
 }
 
 #blog .blog-page .blog-content .card span {
@@ -1727,7 +1734,8 @@ body [class*="col-"] {
   padding-left: 0;
   border-left: none;
   padding: 40px;
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, #61baff 0%, #a6effd 90.1%);
+  background: #fff;
+  color: #0093e9;
   -webkit-box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
           box-shadow: 1px 13px 24px -5px rgba(0, 147, 233, 0.53);
   position: relative;
@@ -1736,6 +1744,7 @@ body [class*="col-"] {
 
 #message #message-container .box-testimony blockquote:after {
   content: "";
+  color: #fff;
   position: absolute;
   top: 100%;
   left: 40px;
