@@ -125,24 +125,16 @@
                                     </a>
                                     <a href="#" class="nav-item">
                                         <li>
-                                            <select>
-                                            <option value="Team 2K20" >
-                                              <a href="./team.html" class="nav-item">
-                                                Core Team
-                                              </a>
+                                            <select name="team" onchange="location = this.value">
+                                            <option value="team.html" >
+                                              Core Team
                                             </option>
-                                            <option value="Team 2K21">
-                                              <a href="./team.html" class="nav-item">
-                                                Senior Team
-                                              </a>
+                                            <option value="team.html">
+                                              Senior team
                                             </option>
                                           </select>
                                         </li>
                                     </a>
-                                    <!-- <a href="./team.html" class="nav-item">
-                                        <li>Team 2K20</li>
-                                        <li>Team 2K21</li>
-                                    </a> -->
                                     <a href="./timeline.html" class="nav-item">
                                         <li>Timeline</li>
                                     </a>
@@ -151,7 +143,9 @@
                         </div>
                         <div class="col-3">
                             <div class="nav-btn">
-                                <div class="btn-grad">Our Blog</div>
+                                <div class="btn-grad">
+                                    <a href="https://cognizanttrances.wordpress.com/">Our Blog</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -213,7 +207,7 @@
                                         <a href="https://www.linkedin.com/in/intellect-browsers-consortium-manit-378b001a7/" class="social-item">
                                             <li><i class="fab fa-linkedin"></i></li>
                                         </a>
-                                        <a href="#" class="social-item">
+                                        <a href="https://cognizanttrances.wordpress.com/" class="social-item">
                                             <li><i class="fab fa-wordpress"></i></li>
                                         </a>
                                     </ul>
@@ -339,9 +333,10 @@
                         <div id="about-right" class="col-xl-6 col-md-12">
                             <p>
                                 IBC is the literary cum management society of NIT-Bhopal dedicated to broaden the literary knowledge base and enhance managerial skills of the students. IBC reinforces essential skills and fosters students to become adept and efficient by training them
-                                for real-life situations in numerous fields such as debating, writing, management, marketing and stock through exuberant competitions.
-                                <br /><br /> IBC organizes various interactive events throughout the year which are an exemplar amalgamation of learning and fun. These events receive a great amount of active participation from students all over the country
-                                from various engineering, medical and business institutes.
+                                for real-life situations in numerous fields such as debating, writing, management, marketing and stock through exuberant competitions. <br><br>IBC organizes various interactive events throughout
+                                the year which are an exemplar amalgamation of learning and fun. These events receive a great amount of active participation from students all over the country from various engineering, medical and business institutes.<br><br>IBC's
+                                blog, Cognizant Trances offers an encouraging platform for young minds to explore the artist within them and articulate their work, to inspire others.
+
                             </p>
                             <!-- <p>
                             Lorem ipsum dolor sit Lorem ipsum dolor sit amet amet consectetur adipisicing elit. Quis, quaerat.
@@ -365,7 +360,7 @@
                     <div class="row pb-5">
                         <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12">
                             <div class="flip-box">
-                                <div class="front" style="background-image: url(//unsplash.it/900)">
+                                <div class="front" style="background-image: url(./assets/crescita_images/2.jpeg)">
                                     <div class="content text-wrap">Crescita<br /></div>
                                 </div>
                                 <div class="back">
@@ -414,7 +409,7 @@
                         </div>
                         <div class="col-xl-4 p-xl-5 col-lg-6 p-lg-3 col-md-12">
                             <div class="flip-box">
-                                <div class="front" style="background-image: url(//unsplash.it/1500)">
+                                <div class="front" style="background-image: url(./assets/azure_images/1.jpeg)">
                                     <div class="content text-center">Azure<br /></div>
                                 </div>
                                 <div class="back">
@@ -630,21 +625,23 @@
                     <div class="blog-content">
                         <div class="band">
                             <div class="item-1 b-card">
-                                <a href="#" class="card">
+                                <a href="https://cognizanttrances.wordpress.com/2021/08/24/the-whites-bistro/" class="card">
                                     <div class="thumb" style="
                           background-image: url(./assets/blogImages/theWhitesBistre.jpeg);
                         "></div>
                                     <article>
                                         <h1>The White's Bistre</h1>
                                         <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, animi?...<span>Read More</span>
+                                            The Whites’ Bistro! (No, not that one!)<br><br>That spark. That “Eureka” bathroom moment. That changed the world’s attitude. That’s where it all began! That’s where Lyra realized the potential of a largely unused
+                                            resource – Grannies and Gramps, aka, the Whites....
+                                            <span>Read More</span>
                                         </p>
                                         <span>Mary Winkler</span>
                                     </article>
                                 </a>
                             </div>
                             <div class="item-2 b-card">
-                                <a href="#" class="card">
+                                <a href="https://cognizanttrances.wordpress.com/2021/08/17/baby-blues/" class="card">
                                     <div class="thumb" style="
                           background-image: url(./assets/blogImages/babyBlues.jpg);
                         "></div>
@@ -660,7 +657,7 @@
                                 </a>
                             </div>
                             <div class="item-3 b-card">
-                                <a href="#" class="card">
+                                <a href="https://cognizanttrances.wordpress.com/2021/08/13/the-black-beauty/" class="card">
                                     <div class="thumb" style="
                           background-image: url(./assets/blogImages/blackBeauty.jpeg);
                         "></div>
@@ -675,7 +672,7 @@
                                     </article>
                                 </a>
                             </div>
-                            <div class="item-4 b-card">
+                            <!-- <div class="item-4 b-card">
                                 <a href="#" class="card">
                                     <div class="thumb" style="background-image: url(//unsplash.it/900)"></div>
                                     <article>
@@ -727,12 +724,12 @@
                         <span>Kendra Schaefer</span>
                                     </article>
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div id="blog-btn" class="col-auto">
-                    <a href="#" class="btn-grad"><i class="fas fa-book-reader p-1"></i>Blog</a
+                    <a href="https://cognizanttrances.wordpress.com/" class="btn-grad"><i class="fas fa-book-reader p-1"></i>Blog</a
               >
             </div>
           </div>
