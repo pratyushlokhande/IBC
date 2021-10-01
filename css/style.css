@@ -136,9 +136,20 @@ body [class*="col-"] {
 
 #home-page #big-nav .nav-list-container {
   height: 100%;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* The container <div> - needed to position the dropdown content */
+  /* Dropdown Content (Hidden by Default) */
+  /* Links inside the dropdown */
+  /* Change color of dropdown links on hover */
+  /* Show the dropdown menu on hover */
 }
 
 #home-page #big-nav .nav-list-container .nav-list {
@@ -200,6 +211,82 @@ body [class*="col-"] {
           transform-origin: bottom left;
 }
 
+#home-page #big-nav .nav-list-container .dropbtn {
+  height: 80%;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: "Montserrat", sans-serif;
+  background: none;
+  outline: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+#home-page #big-nav .nav-list-container .dropbtn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 5px;
+  border-radius: 2.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #b31217;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+#home-page #big-nav .nav-list-container .dropbtn:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+#home-page #big-nav .nav-list-container .dropdown {
+  position: relative;
+  display: block;
+}
+
+#home-page #big-nav .nav-list-container .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+#home-page #big-nav .nav-list-container .dropdown-content a {
+  color: #0093e9;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+
+#home-page #big-nav .nav-list-container .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+#home-page #big-nav .nav-list-container .dropdown:hover .dropdown-content {
+  display: block;
+}
+
 #home-page #big-nav .nav-btn {
   width: 100%;
   height: 100%;
@@ -252,6 +339,11 @@ body [class*="col-"] {
 #home-page #big-nav .nav-btn .btn-grad {
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+}
+
+#home-page #big-nav .nav-btn .btn-grad a {
+  text-decoration: none;
+  color: #fff;
 }
 
 #home-page .nav-active {

@@ -28,8 +28,6 @@ $footer-color: #0a1d37;
   );
 }
 
-
-
 @mixin grad-button {
   .btn-grad {
     background-image: linear-gradient(
@@ -278,8 +276,9 @@ body {
 
     .nav-list-container {
       height: 100%;
-      display: grid;
-      place-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .nav-list {
         width: 100%;
@@ -323,6 +322,76 @@ body {
           }
         }
       }
+
+      // dropdown
+      .dropbtn {
+        height: 80%;
+        text-decoration: none;
+        font-size: 2vw;
+        font-family: $heading;
+        background: none;
+        outline: none;
+        border: none;
+
+        display: flex;
+        position: relative;
+        color: $secondary-color;
+        align-items: center;
+        transition: all 500ms ease-in-out;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 5px;
+          border-radius: 2.5px;
+          bottom: 0;
+          left: 0;
+          background-color: $counter-color;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+
+        &:hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: $main-color;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-weight: bold;
+      }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
     }
 
     .nav-btn {
@@ -334,6 +403,11 @@ body {
       @include grad-button();
       .btn-grad {
         transition: all 500ms ease-in-out;
+
+        a {
+          text-decoration: none;
+          color: $secondary-color;
+        }
       }
     }
   }
