@@ -141,8 +141,8 @@ let aboutTl = gsap.timeline({
   scrollTrigger: {
     trigger: "#about-right",
     start: "top center",
-    end: "bottom bottom",
-    scrub: 1,
+    end: `${window.innerWidth < 768 ? "top top" : "bottom bottom"}`,
+    scrub: `${window.innerWidth < 768 ? 0 : 1}`,
     scroller: ".smooth-scroll",
   },
 });

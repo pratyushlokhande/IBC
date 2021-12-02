@@ -922,7 +922,7 @@ body [class*="col-"] {
 
 @media only screen and (max-width: 992px) {
   #about-right p {
-    font-size: 2vh !important;
+    font-size: 3vh !important;
   }
 }
 
@@ -931,7 +931,7 @@ body [class*="col-"] {
     padding: 0 5vw !important;
   }
   #about-right p {
-    font-size: 2vh !important;
+    font-size: 3vh !important;
   }
 }
 
