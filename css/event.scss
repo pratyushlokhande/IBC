@@ -70,7 +70,6 @@ body {
   top: 0;
   left: 0;
   display: none;
-
   @media only screen and (max-width: 768px) {
     display: block;
   }
@@ -265,6 +264,7 @@ body {
 }
 
 #home {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -279,10 +279,27 @@ body {
     right: 1vw;
     height: 69vh;
     margin: 5vw;
-    background: url(//unsplash.it/1080);
+    // background: url(//unsplash.it/1080);
     background-position: center;
     background-size: cover;
     transform-origin: top;
+    overflow: hidden;
+
+    .bg-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .bg-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+    }
 
     @media only screen and (max-width: 768px) {
       margin: 0;
@@ -312,7 +329,7 @@ body {
         }
 
         @media only screen and (max-width: 768px) {
-          font-size: 12vh;
+          font-size: 5vh;
         }
       }
 
@@ -388,14 +405,24 @@ body {
   }
 
   .card {
+    width: 100%;
+    height: 100%;
     flex: 1;
     // margin: 0.5vw;
     background: url(//unsplash.it/1000);
     background-position: center;
     background-size: cover;
     border: 10px solid #fff;
-    box-shadow: 5px 5px 15px #003030;
+    // box-shadow: 5px 5px 15px $nav-color;
+    box-shadow: rgba(23, 16, 16, 0.35) 0px 5px 15px;
     transform-origin: top;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }
 
@@ -514,7 +541,7 @@ body {
 }
 
 #about {
-  // position: relative;
+  position: relative;
   width: 100%;
   min-height: 100vh;
   padding: 10vh;
@@ -557,6 +584,10 @@ body {
 
       span {
         display: inline-block;
+
+        @media only screen and (max-width: 768px) {
+          font-size: 8vh;
+        }
       }
     }
 
@@ -609,6 +640,11 @@ body {
 
     span {
       display: inline-block;
+      line-height: 100%;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 8vh;
+      }
     }
 
     @media only screen and (max-width: 768px) {
@@ -619,11 +655,11 @@ body {
   .img-container {
     position: relative;
     width: 100%;
-    height: 80vh;
+    // height: 80vh;
     margin-top: 2vh;
 
     @media only screen and (max-width: 768px) {
-      height: 200vh;
+      // height: 200vh;
     }
     .parent {
       width: 100%;
@@ -661,6 +697,12 @@ body {
     .div5,
     .div6 {
       background: url(//unsplash.it/900);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
 
     @media only screen and (max-width: 1200px) {
@@ -735,10 +777,13 @@ footer {
   font-family: $bebas;
 
   ul {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     gap: 2vw;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 
     li {
       i {

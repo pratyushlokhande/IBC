@@ -21,13 +21,13 @@ tl.from(".nav-wrapper", { y: -100, opacity: 0, duration: 1 })
   .from(".webpage-title", { y: -100, opacity: 0, duration: 1 }, "-=1")
   .from(".social-nav", { x: 100, opacity: 0, duration: 1 }, "-=.5")
   .from(".side-nav", { x: -100, opacity: 0, duration: 1 }, "-=1")
-  .from(".bg", { scaleY: 0, opacity: 0, duration: 1 })
+  .to(".bg-wrapper", { top: "100%", duration: 1 })
+  .from(".bg-image", { scale: 1.5, duration: 1 }, "-=1")
   .from(
     ".card",
     {
       y: 100,
       opacity: 0,
-      boxShadow: "0px 0px 0px grey",
       duration: 1.5,
       stagger: 0.25,
     },

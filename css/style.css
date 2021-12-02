@@ -259,7 +259,7 @@ body [class*="col-"] {
 
 #home-page #big-nav .nav-list-container .dropdown {
   position: relative;
-  display: block;
+  display: inline-block;
 }
 
 #home-page #big-nav .nav-list-container .dropdown-content {
